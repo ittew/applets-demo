@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/main",
     "pages/detail/main",
+    "pages/index/main",
     "pages/logs/main",
     "pages/counter/main",
     "pages/classification/main",
@@ -29,7 +29,7 @@
         "selectedIconPath": "/static/tabs/home-selectIcon.png"
       },
       {
-        "pagePath": "pages/classification/main",
+        "pagePath": "pages/list/main",
         "text": "分类",
         "iconPath": "/static/tabs/fen-icon.png",
         "selectedIconPath": "/static/tabs/fen-selectIcon.png"

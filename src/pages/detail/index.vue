@@ -1,62 +1,68 @@
 <template>
   <div>
     <div class="toptitlebar">
-        <!-- 背景虚化层 -->
-        <div class="bg" :style="{'background-image':'url('+imgurl+')','background-size': '100% 100%', 'background-repeat': 'no-repeat'}"></div>
-        <!-- 内容 -->
-        <div class="baritem" v-for="(item, index) in performanceInfo" :key="index">
-          <div class="baritemtop">
-            <div class="themebgimg" :style="{'background-image':'url('+item.imgurl+')','background-size':'100% 100%'}"></div>
-            <div class="themeinfo">
-              <div class="themetitle">{{item.title}}</div>
-              <div class="themeauthor">
-                <!-- <image class="" src="" mode="widthFix"></image> -->
-                {{item.author}} <span class="icon-right"></span>
-              </div>
-              <div class="viewinfo">
-                <div class="viewinfoleft">{{item.num1}}人收藏</div>
-                <span class="viewinfomid">|</span>
-                <div class="viewinforight">已更新{{item.num2}}期</div>
-              </div>
+      <!-- 背景虚化层 -->
+      <div class="bg" :style="{'background-image':'url('+imgurl+')','background-size': '100% 100%', 'background-repeat': 'no-repeat'}"></div>
+      <!-- 内容 -->
+      <div class="baritem" v-for="(item, index) in performanceInfo" :key="index">
+        <div class="baritemtop">
+          <div class="themebgimg" :style="{'background-image':'url('+item.imgurl+')','background-size':'100% 100%'}"></div>
+          <div class="themeinfo">
+            <div class="themetitle">{{item.title}}</div>
+            <div class="themeauthor">
+              {{item.author}} <span class="icon-right"></span>
+            </div>
+            <div class="viewinfo">
+              <div class="viewinfoleft">{{item.num1}}人收藏</div>
+              <span class="viewinfomid">|</span>
+              <div class="viewinforight">已更新{{item.num2}}期</div>
             </div>
           </div>
-          <div class="baritembottom">
-            <button class="sharebut"><span class="icon-share"></span> 分享</button>
-            <button class="collection"><span class="icon-add"></span> 收藏</button>
-          </div>
         </div>
+        <div class="baritembottom">
+          <button class="sharebut"><span class="icon-share"></span> 分享</button>
+          <button class="collection"><span class="icon-add"></span> 收藏</button>
+        </div>
+      </div>
     </div>
     <!-- 顶部选项 -->
     <div class="Performance">
       <div class="selectbar">
-        <div class="detail">详情</div>
-        <div class="list active">节目<span>152</span>
-        </div>
+        <div class="detail" :class="{'active': currentIndex == 1}" @tap="currentIndex = 1">详情</div>
+        <div class="list" :class="{'active': currentIndex == 2}" @tap="currentIndex = 2">节目<span>152</span></div>
       </div>
-      <!-- 播放选项 -->
-      <div class="play">
-        <div class="playall">
-          <span class="icon-video"></span> 播放全部
+      <div class="tabs-box">
+        <div class="detail-box" v-show="currentIndex == 1">
+          <p>本次升级，旨在提供对其他小程序平台的能力支持，主要涉及的功能点如下：提供一套源代码，构建到不同平台目标代码的能力提供 api 统一调用的能力，附带平台判断能力，可针对平台单独书写逻辑代码，详见示例重构 mpvue 代码转换部分的功能</p>
+          <image :src="imgurl" alt="" />
         </div>
-        <div class="playselect">
-          <div style="margin-right:20rpx"><span class="icon-order"></span> 正序</div>
-          <div><span class="icon-list"></span> 选集</div>
-        </div>
-      </div>
-      <!-- 节目列表 -->
-      <div class="performanceContent" v-for="(item, index) in performance" :key="index">
-        <!-- 序号 -->
-        <div class="performanceIndex">{{index+1}}</div>
-        <!-- 节目标题 -->
-        <div class="performanceInfo">
-          <div class="performanceInfoTop">
-            <div style="font-size:33rpx">{{item.name}}</div>
-            <div style="color:#aaaaaa">{{item.year}}</div>
+        <div class="list-box" v-show="currentIndex == 2">
+          <!-- 播放选项 -->
+          <div class="play">
+            <div class="playall">
+              <span class="icon-video"></span> 播放全部
+            </div>
+            <div class="playselect">
+              <div style="margin-right:20rpx"><span class="icon-order"></span> 正序</div>
+              <div><span class="icon-list"></span> 选集</div>
+            </div>
           </div>
-          <!-- 播放次数和时间 -->
-          <div class="performanceInfoBottom">
-            <div><span class="icon-video"></span>{{item.count}}</div>
-            <div style="margin-left:20rpx"><span class="icon-time"></span>{{item.time}}</div>
+          <!-- 节目列表 -->
+          <div class="performanceContent" v-for="(item, index) in performance" :key="index" @tap="goPlayer(item)">
+            <!-- 序号 -->
+            <div class="performanceIndex">{{index+1}}</div>
+            <!-- 节目标题 -->
+            <div class="performanceInfo">
+              <div class="performanceInfoTop">
+                <div style="font-size:33rpx">{{item.name}}</div>
+                <div style="color:#aaaaaa">{{item.year}}</div>
+              </div>
+              <!-- 播放次数和时间 -->
+              <div class="performanceInfoBottom">
+                <div><span class="icon-video"></span>{{item.count}}</div>
+                <div style="margin-left:20rpx"><span class="icon-time"></span>{{item.time}}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -68,6 +74,7 @@
 export default {
   data () {
     return {
+      currentIndex: '1',
       performance: [
         {
           name: '《人在江湖》郭德纲 于谦',
@@ -151,7 +158,14 @@ export default {
 
   components: {},
 
-  methods: {},
+  methods: {
+    goPlayer (item) {
+      console.log(item)
+      wx.navigateTo({
+        url: '/pages/player/main?id=1'
+      })
+    }
+  },
 
   created () {
     // let app = getApp()
@@ -204,7 +218,7 @@ export default {
 
 .themetitle {
   color: #fff;
-  font-size: 40rpx;
+  font-size: 36rpx;
   display: -webkit-box;
   -webkit-line-clamp: 2;/*行数n*/
   -webkit-box-orient: vertical;
@@ -213,7 +227,7 @@ export default {
 }
 
 .themeauthor {
-  font-size: 25rpx;
+  font-size: 26rpx;
   color: #fff;
   margin-top: 5rpx;
 }
@@ -236,32 +250,30 @@ export default {
 
 .baritembottom {
   width: 70%;
-  height: 100rpx;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   border-radius: 20rpx;
   float: right;
   margin-top: 15rpx;
-}
-
-.baritembottom button {
-  width: 210rpx;
-  height: 75rpx;
-  text-align: center;
-  font-size: 30rpx;
-  color: #fff;
-  border-radius: 20rpx;
-}
-
-.sharebut {
-  background: orangered;
-  border: 1rpx solid #fff;
-  margin-left: 70rpx;
-}
-
-.collection {
-  background: orangered;
+  button {
+    width: 210rpx;
+    height: 64rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30rpx;
+    color: #fff;
+    border-radius: 16rpx;
+  }
+  .sharebut {
+    background: transparent;
+    border: 1rpx solid #fff;
+    margin-left: 44rpx;
+  }
+  .collection {
+    color: #333;
+    background: #fff;
+  }
 }
 
 .Performance {
@@ -297,7 +309,7 @@ export default {
 .play {
   width: 100%;
   height: 100rpx;
-  padding: 0rpx 40rpx;
+  padding: 0rpx 36rpx;
   box-sizing: border-box;
   border-bottom: 1rpx solid #f1f1f1;
   display: flex;
@@ -372,5 +384,13 @@ export default {
   bottom: 0rpx;
   left: 150rpx;
   background-color: orangered;
+}
+.detail-box{
+  padding: 36rpx;
+  font-size: 30rpx;
+  image{
+    max-width: 100%;
+    margin: 10rpx 0;
+  }
 }
 </style>
