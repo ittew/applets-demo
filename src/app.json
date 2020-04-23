@@ -1,13 +1,14 @@
 {
   "pages": [
-    "pages/detail/main",
     "pages/index/main",
+    "pages/detail/main",
     "pages/logs/main",
     "pages/counter/main",
     "pages/classification/main",
     "pages/collection/main",
     "pages/user/main",
-    "pages/player/main"
+    "pages/player/main",
+    "pages/list/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
