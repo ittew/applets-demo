@@ -9,7 +9,7 @@
           <div class="themebgimg" :style="{'background-image':'url('+item.imgurl+')','background-size':'100% 100%'}"></div>
           <div class="themeinfo">
             <div class="themetitle">{{item.title}}</div>
-            <div class="themeauthor">
+            <div class="themeauthor" @tap="goPerachor">
               {{item.author}} <span class="icon-right"></span>
             </div>
             <div class="viewinfo">
@@ -163,6 +163,12 @@ export default {
       console.log(item)
       wx.navigateTo({
         url: '/pages/player/main?id=1'
+      })
+    },
+    // 跳转个人主播页面
+    goPerachor () {
+      wx.navigateTo({
+        url: '/pages/perAnchor/main'
       })
     }
   },
