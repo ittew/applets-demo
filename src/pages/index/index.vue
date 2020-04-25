@@ -166,7 +166,7 @@ export default {
       console.log(5555)
       // var url = e.currentTarget.dataset.coverimg
       // var title = e.currentTarget.dataset.title
-      wx.navigateTo({
+      wx.switchTab({
         url: '/pages/list/main'
       })
     }

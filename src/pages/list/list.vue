@@ -8,10 +8,10 @@
     </div>
     <!-- 对应的内容区 -->
     <!-- <scroll-view scroll-y> -->
-      <div class="content-item"  v-for="(item,index) in currentList" :key="index">
-        <div class="indexNumber">
+      <div class="content-item" @tap="gotoDetails"  v-for="(item,index) in currentList" :key="index">
+        <!-- <div class="indexNumber">
           <div>{{index > 10 ? index : '0'+(index+1)}}</div>
-        </div>
+        </div> -->
         <image :src="item.albumCoverUrl290"></image>
         <div class="content-left">
           <div class="content-title">{{item.title}}</div>
@@ -207,6 +207,12 @@ export default {
   },
   methods: {
     // 跳转商品详情页面
+    gotoDetails () {
+      wx.navigateTo({
+        url: '/pages/detail/main'
+      })
+    },
+    // 跳转商品详情页面
     handleClick (i) {
       this.currentTab = i
       this.currentList = this.listData[i].hotRecommends.list
@@ -272,16 +278,15 @@ export default {
   }
 
   .content-item image {
-    width: 140rpx;
-    height: 140rpx;
+    width: 150rpx;
+    height: 150rpx;
     margin-top: 10rpx;
     border-radius: 15rpx;
   }
 
   .content-left {
     padding: 10rpx 0rpx;
-    margin-left: 30rpx;
-    width: 60%;
+    width: 70%;
     height: auto;
     border-bottom: 1rpx solid #f1f1f1;
   }
