@@ -169,7 +169,7 @@ export default {
 
   created () {
     this.myAudio = wx.createInnerAudioContext()
-    this.myAudio.src = 'https://m10.music.126.net/20200425151346/cf6ded54a65078fb42e004f7d382d193/yyaac/obj/wonDkMOGw6XDiTHCmMOi/2156190614/159d/2831/2c24/34f1debc58669322c130a6f1c22f2cda.m4a'
+    this.myAudio.src = 'https://eo-sycdn.kuwo.cn/6ef967ef39d8340a1eafc169b6a1e922/5ea3e27b/resource/n2/56/34/1683736193.mp3'
     this.myAudio.title = 'Cannon'
     console.log(this.myAudio)
     // 在onCanplay里获取并设置音频时长和播放进度

@@ -3,7 +3,7 @@
     <!-- 搜索框 -->
     <div class="search">
         <span class="icon-search"></span>
-        <input placeholder="搜索你想听的节目">
+        <input placeholder="搜索你想听的内容">
     </div>
     <!-- 轮播图 -->
     <div class="swiper-container">
@@ -27,28 +27,28 @@
     <div class="like">
       <div class="barTitle">
         <div class="Title-left">猜你喜欢</div>
-        <div class="Title-right" @tap="gotoList">查看全部 <text class="icon-right"></text> </div>
+        <div class="Title-right" @tap="gotoList(1)">查看全部 <span class="icon-right"></span> </div>
       </div>
       <div class="likeItemBox">
-        <div class="likeItem" @tap="gotoDetails"  v-for="(v,i) in guess" :key="i">
+        <div class="likeItem" @tap="gotoDetails"  v-for="(v,i) in sights" :key="i">
           <div class="likeimg">
             <img class="likeItemIcon" :src="v.coverMiddle">
             <div class="likecover">
               <!-- text用来显示icon  暂无 -->
-              <text class=""></text> 4.6亿
+              <span class=""></span> 4.6万/人次
             </div>
           </div>
           <div class="likeText">{{v.intro}}</div>
         </div>
       </div>
     </div>
-    <!-- 有声小说 -->
-    <div class="contentList">
+    <!-- 内容列表：旅游+教育 -->
+    <div class="contentList" v-for="(v,i) in content" :key="i">
       <div class="barTitle">
-        <div class="Title-left">有声小说</div>
-        <div class="Title-right" @tap="gotoList">查看全部<text class="icon-right"></text></div>
+        <div class="Title-left">{{v.title}}</div>
+        <div class="Title-right" @tap="gotoList(i+2)">查看全部<span class="icon-right"></span></div>
       </div>
-      <div v-for="(item,index) in novel" :key="index">
+      <div v-for="(item,index) in v.list" :key="index">
         <div class="content" @tap="gotoDetails">
           <div class="contentImg">
             <image :src="item.albumCoverUrl290" mode="widthFix"></image>
@@ -59,38 +59,7 @@
               <div class="introduction">{{item.trackTitle}}</div>
             </div>
             <div class="count">
-              <div class="playcount">
-                <!-- <text class="icon-"></text> -->
-                126亿
-              </div>
-              <div class="jicount">{{item.tracks}}集</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 旅游 -->
-    <div class="contentList">
-      <div class="barTitle">
-        <div class="Title-left">旅游</div>
-        <div class="Title-right" @tap="gotoList">查看全部<text class="icon-right"></text></div>
-      </div>
-      <div v-for="(item,index) in novel" :key="index">
-        <div class="content" @tap="gotoDetails">
-          <div class="contentImg">
-            <image :src="item.albumCoverUrl290" mode="widthFix"></image>
-          </div>
-          <div class="content-right">
-            <div class="content-title">
-              <div class="titleText">{{item.title}}</div>
-              <div class="introduction">{{item.trackTitle}}</div>
-            </div>
-            <div class="count">
-              <div class="playcount">
-                <!-- <text class="icon-"></text> -->
-                126亿
-              </div>
-              <div class="jicount">{{item.tracks}}集</div>
+              <div class="jicount"> {{item.tracks}}万</div>
             </div>
           </div>
         </div>
@@ -110,39 +79,66 @@ export default {
         '/static/images/index/ad3.jpg',
         '/static/images/index/ad4.jpg',
         '/static/images/index/ad5.jpg',
-        '/static/images/index/ad6.jpg',
-        '/static/images/index/ad7.jpg'
+        '/static/images/index/ad6.jpg'
       ],
-      guess: [
+      sights: [
         {
-          'intro': '聪明宝宝从胎教音乐开始',
-          'coverMiddle': 'http://imagev2.xmcdn.com/group32/M08/28/BB/wKgJS1muRorAI1jPAAKG8d9Exac241.png!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png'
+          'intro': '西安城墙',
+          'coverMiddle': 'https://pic.qyer.com/album/user/3604/0/Qk9VRhoHYkk/index/180180'
         }, {
-          'intro': '聪明宝宝从胎教音乐开始',
-          'coverMiddle': 'http://imagev2.xmcdn.com/group32/M08/28/BB/wKgJS1muRorAI1jPAAKG8d9Exac241.png!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png'
+          'intro': '陕西历史博物馆',
+          'coverMiddle': 'https://pic.qyer.com/album/user/1965/51/QEBTRx8GYkA/index/180180'
         }, {
-          'intro': '聪明宝宝从胎教音乐开始',
-          'coverMiddle': 'http://imagev2.xmcdn.com/group32/M08/28/BB/wKgJS1muRorAI1jPAAKG8d9Exac241.png!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png'
+          'intro': '大唐芙蓉园',
+          'coverMiddle': 'https://pic.qyer.com/album/user/3710/48/Qk5UQh4PZ0E/index/180180'
         }
       ],
-      novel: [
+      content: [
         {
-          'albumCoverUrl290': 'http://imagev2.xmcdn.com/group66/M02/5F/87/wKgMdV1k-SryG2bxAANsUR5aOuY490.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-          'title': '《长宁帝军》| 江湖范儿热血爽文',
-          'trackTitle': '今日，谁与我共同浴血，谁就是我的兄弟',
-          'tracks': 100
+          title: '陕西旅游',
+          list: [
+            {
+              'albumCoverUrl290': 'https://pic.qyer.com/album/user/3603/99/Qk9VQRMOZUk/index/180180',
+              'title': '华清宫',
+              'trackTitle': '高高骊山上有宫，朱楼紫殿三四重',
+              'tracks': 100
+            },
+            {
+              'albumCoverUrl290': 'https://pic.qyer.com/album/user/863/65/SU9WRB8OaA/index/180180',
+              'title': '秦岭野生动物园',
+              'trackTitle': '秦岭北麓。野生动物园。古城旅游的一颗璀璨明珠。',
+              'tracks': 110
+            },
+            {
+              'albumCoverUrl290': 'https://pic.qyer.com/album/user/3637/52/Qk9WRR8FYUs/index/180180',
+              'title': '曲江海洋极地公园',
+              'trackTitle': '欢乐的海洋之旅，将洗去你冬日的阴霾',
+              'tracks': 120
+            }
+          ]
         },
         {
-          'albumCoverUrl290': 'http://imagev2.xmcdn.com/group66/M02/5F/87/wKgMdV1k-SryG2bxAANsUR5aOuY490.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-          'title': '《长宁帝军》| 江湖范儿热血爽文',
-          'trackTitle': '今日，谁与我共同浴血，谁就是我的兄弟',
-          'tracks': 100
-        },
-        {
-          'albumCoverUrl290': 'http://imagev2.xmcdn.com/group66/M02/5F/87/wKgMdV1k-SryG2bxAANsUR5aOuY490.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-          'title': '《长宁帝军》| 江湖范儿热血爽文',
-          'trackTitle': '今日，谁与我共同浴血，谁就是我的兄弟',
-          'tracks': 100
+          title: '陕西教育',
+          list: [
+            {
+              'albumCoverUrl290': '/static/images/index/ed1.png',
+              'title': '面授在线一致化',
+              'trackTitle': '无论面授课还是在线课，我们都是同一套教材编写、教师培训体系，保证线上线下一致化。',
+              'tracks': 100
+            },
+            {
+              'albumCoverUrl290': '/static/images/index/ed2.png',
+              'title': '教师教研本地化',
+              'trackTitle': '依托线下教学教研体系，专注本地化的学情研究，优选本地高端师资，更适合本地孩子',
+              'tracks': 110
+            },
+            {
+              'albumCoverUrl290': '/static/images/index/ed3.png',
+              'title': '专属班主任服务',
+              'trackTitle': '授课内容针对孩子存在的障碍专项讲解，课上高频互动，关注每个孩子的学习吸收情况。',
+              'tracks': 120
+            }
+          ]
         }
       ],
       swiperCurrent: 0
@@ -162,12 +158,12 @@ export default {
       })
     },
     // 跳转商品详情页面
-    gotoList () {
+    gotoList (i) {
       console.log(5555)
       // var url = e.currentTarget.dataset.coverimg
       // var title = e.currentTarget.dataset.title
       wx.switchTab({
-        url: '/pages/list/main'
+        url: '/pages/list/main?index=' + i
       })
     }
   }
@@ -266,6 +262,11 @@ export default {
     float: right;
     font-size: 26rpx;
     color: #aaa;
+
+  }
+  .icon-right {
+    // background: url("") no-repeat center center;
+    background-size: 64rpx 64rpx;
   }
   .like{
     width: 90%;
@@ -331,7 +332,7 @@ export default {
     color: red;
     font-weight: 800;
   }
-  /* 有声小说-主要内容列表样式 */
+  /* 主要内容列表样式 */
   .contentList{
     width: 90%;
     height: auto;
@@ -385,7 +386,7 @@ export default {
     font-size: 28rpx;
     color: #cdcdcd;
     text-align: left;
-    padding: 15rpx 0rpx;
+    margin: 15rpx 0rpx;
     display: -webkit-box;
     -webkit-line-clamp: 2;/*行数n*/
     -webkit-box-orient: vertical;
@@ -398,11 +399,6 @@ export default {
     display: flex;
     justify-content: start;
     align-items: center;
-  }
-  .playcount{
-  font-size: 25rpx;
-  color: #cdcdcd;
-  margin-right: 30rpx;
   }
   .jicount{
     font-size: 25rpx;

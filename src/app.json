@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/player/main",
     "pages/index/main",
+    "pages/player/main",
     "pages/perAnchor/main",
     "pages/detail/main",
     "pages/logs/main",

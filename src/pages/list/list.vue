@@ -40,9 +40,9 @@ export default {
     return {
       currentTab: 0,
       navTitle: [
-        {title: '儿童教育'},
-        {title: '人文历史'},
-        {title: '最潮外语'}
+        {title: '猜你喜欢'},
+        {title: '陕西旅游'},
+        {title: '陕西教育'}
       ],
       currentList: [],
       listData: [
@@ -50,49 +50,49 @@ export default {
           'hotRecommends': {
             'list': [
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group66/M02/5F/87/wKgMdV1k-SryG2bxAANsUR5aOuY490.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '《长宁帝军》| 江湖范儿热血爽文',
-                'trackTitle': '今日，谁与我共同浴血，谁就是我的兄弟'
+                'albumCoverUrl290': '/static/images/list/list1.jpg',
+                'title': '西安钟楼',
+                'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list2.jpeg',
+                'title': '西安小雁塔',
+                'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list3.jpg',
+                'title': '西安城墙',
+                'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list1.jpg',
+                'title': '西安钟楼',
+                'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list2.jpeg',
+                'title': '西安小雁塔',
+                'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list3.jpg',
+                'title': '西安城墙',
+                'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list2.jpeg',
+                'title': '西安小雁塔',
+                'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list3.jpg',
+                'title': '西安城墙',
+                'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list1.jpg',
+                'title': '西安钟楼',
+                'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
               }
             ]
           }
@@ -101,49 +101,49 @@ export default {
           'hotRecommends': {
             'list': [
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group66/M02/5F/87/wKgMdV1k-SryG2bxAANsUR5aOuY490.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '《长宁帝军》| 江湖范儿热血爽文',
-                'trackTitle': '今日，谁与我共同浴血，谁就是我的兄弟'
+                'albumCoverUrl290': 'https://pic.qyer.com/album/user/3603/99/Qk9VQRMOZUk/index/180180',
+                'title': '华清宫',
+                'trackTitle': '高高骊山上有宫，朱楼紫殿三四重'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '22222222222222222222',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': 'https://pic.qyer.com/album/user/863/65/SU9WRB8OaA/index/180180',
+                'title': '秦岭野生动物园',
+                'trackTitle': '秦岭北麓。野生动物园。古城旅游的一颗璀璨明珠。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '22222222222222222222',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': 'https://pic.qyer.com/album/user/3637/52/Qk9WRR8FYUs/index/180180',
+                'title': '曲江海洋极地公园',
+                'trackTitle': '欢乐的海洋之旅，将洗去你冬日的阴霾'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '22222222222222222222',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': 'https://pic.qyer.com/album/user/3603/99/Qk9VQRMOZUk/index/180180',
+                'title': '华清宫',
+                'trackTitle': '高高骊山上有宫，朱楼紫殿三四重'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '2222222222222222',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': 'https://pic.qyer.com/album/user/863/65/SU9WRB8OaA/index/180180',
+                'title': '秦岭野生动物园',
+                'trackTitle': '秦岭北麓。野生动物园。古城旅游的一颗璀璨明珠。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '2222222222222222',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': 'https://pic.qyer.com/album/user/3637/52/Qk9WRR8FYUs/index/180180',
+                'title': '曲江海洋极地公园',
+                'trackTitle': '欢乐的海洋之旅，将洗去你冬日的阴霾'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '22222222222222222222222222222222',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': 'https://pic.qyer.com/album/user/3603/99/Qk9VQRMOZUk/index/180180',
+                'title': '华清宫',
+                'trackTitle': '高高骊山上有宫，朱楼紫殿三四重'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '22222222222222222222222222222222',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': 'https://pic.qyer.com/album/user/863/65/SU9WRB8OaA/index/180180',
+                'title': '秦岭野生动物园',
+                'trackTitle': '秦岭北麓。野生动物园。古城旅游的一颗璀璨明珠。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '222222222222',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': 'https://pic.qyer.com/album/user/3637/52/Qk9WRR8FYUs/index/180180',
+                'title': '曲江海洋极地公园',
+                'trackTitle': '欢乐的海洋之旅，将洗去你冬日的阴霾'
               }
             ]
           }
@@ -152,49 +152,49 @@ export default {
           'hotRecommends': {
             'list': [
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group66/M02/5F/87/wKgMdV1k-SryG2bxAANsUR5aOuY490.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '《长宁帝军》| 江湖范儿热血爽文',
-                'trackTitle': '今日，谁与我共同浴血，谁就是我的兄弟'
+                'albumCoverUrl290': '/static/images/index/ed1.png',
+                'title': '面授在线一致化',
+                'trackTitle': '无论面授课还是在线课，我们都是同一套教材编写、教师培训体系，保证线上线下一致化。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '33333333333333333',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/index/ed2.png',
+                'title': '教师教研本地化',
+                'trackTitle': '依托线下教学教研体系，专注本地化的学情研究，优选本地高端师资，更适合本地孩子'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '333333333333333333333333',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/index/ed3.png',
+                'title': '专属班主任服务',
+                'trackTitle': '授课内容针对孩子存在的障碍专项讲解，课上高频互动，关注每个孩子的学习吸收情况。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '333333333333333333333333',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/index/ed1.png',
+                'title': '面授在线一致化',
+                'trackTitle': '无论面授课还是在线课，我们都是同一套教材编写、教师培训体系，保证线上线下一致化。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '333333333333333333333333',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/index/ed2.png',
+                'title': '教师教研本地化',
+                'trackTitle': '依托线下教学教研体系，专注本地化的学情研究，优选本地高端师资，更适合本地孩子'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '333333333333333333333333',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/index/ed3.png',
+                'title': '专属班主任服务',
+                'trackTitle': '授课内容针对孩子存在的障碍专项讲解，课上高频互动，关注每个孩子的学习吸收情况。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '333333333333333333333333',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/index/ed1.png',
+                'title': '面授在线一致化',
+                'trackTitle': '无论面授课还是在线课，我们都是同一套教材编写、教师培训体系，保证线上线下一致化。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '333333333333333333333333',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/index/ed2.png',
+                'title': '教师教研本地化',
+                'trackTitle': '依托线下教学教研体系，专注本地化的学情研究，优选本地高端师资，更适合本地孩子'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '333333333333333333333333',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/index/ed3.png',
+                'title': '专属班主任服务',
+                'trackTitle': '授课内容针对孩子存在的障碍专项讲解，课上高频互动，关注每个孩子的学习吸收情况。'
               }
             ]
           }
@@ -203,6 +203,7 @@ export default {
     }
   },
   beforeMount () {
+    // this.currentTab = this.$router.query.index
     this.currentList = this.listData[0].hotRecommends.list
   },
   methods: {
