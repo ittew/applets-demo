@@ -12,7 +12,7 @@
         <!-- <div class="indexNumber">
           <div>{{index > 10 ? index : '0'+(index+1)}}</div>
         </div> -->
-        <image :src="item.albumCoverUrl290"></image>
+        <image :src="item.albumCoverUrl290" />
         <div class="content-left">
           <div class="content-title">{{item.title}}</div>
           <div class="content-text">{{item.trackTitle}}</div>

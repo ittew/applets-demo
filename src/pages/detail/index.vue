@@ -10,7 +10,9 @@
           <div class="themeinfo">
             <div class="themetitle">{{item.title}}</div>
             <div class="themeauthor" @tap="goPerachor">
-              {{item.author}} <span class="icon-right"></span>
+              <img src="/static/images/index_icon4.png" alt="">
+              <span class="nickname">{{item.author}}</span>
+              <span class="icon-right">></span>
             </div>
             <div class="viewinfo">
               <div class="viewinfoleft">{{item.num1}}人收藏</div>
@@ -21,7 +23,7 @@
         </div>
         <div class="baritembottom">
           <button class="sharebut"><span class="icon-share"></span> 分享</button>
-          <button class="collection"><span class="icon-add"></span> 收藏</button>
+          <button class="collection" :class="{'active':!isCollection}" @tap="collectionHandle"><span class="icon-add"></span>{{isCollection?'已收藏':'收藏'}}</button>
         </div>
       </div>
     </div>
@@ -33,7 +35,7 @@
       </div>
       <div class="tabs-box">
         <div class="detail-box" v-show="currentIndex == 1">
-          <p>本次升级，旨在提供对其他小程序平台的能力支持，主要涉及的功能点如下：提供一套源代码，构建到不同平台目标代码的能力提供 api 统一调用的能力，附带平台判断能力，可针对平台单独书写逻辑代码，详见示例重构 mpvue 代码转换部分的功能</p>
+          <p>西安城墙是中国现存规模最大、保存最完整的古代城垣。现存城墙为明代建筑，全长13.7千米，始建于明太祖洪武三年（1370年），洪武十一年（1378年）竣工，是在明太祖“高筑墙、广积粮、缓称王”的政策指导下，在隋、唐皇城的基础上建成的，当时是西安的府城。明太祖朱元璋将次子朱樉册封为秦王，藩封、府治同在一城，因而城池规模宏大坚固，再加上后来明清屡次修葺、增建，至今保存完好。</p>
           <image :src="imgurl" alt="" />
         </div>
         <div class="list-box" v-show="currentIndex == 2">
@@ -74,70 +76,70 @@
 export default {
   data () {
     return {
-      currentIndex: '1',
+      currentIndex: '2',
       performance: [
         {
-          name: '《人在江湖》郭德纲 于谦',
+          name: '《梦长安》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
         },
         {
-          name: '《人在江湖》郭德纲 于谦',
+          name: '《梦长安》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
         },
         {
-          name: '《人在江湖》郭德纲 于谦',
+          name: '《梦长安》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
         },
         {
-          name: '《人在江湖》郭德纲 于谦',
+          name: '《梦长安》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
         },
         {
-          name: '《人在江湖》郭德纲 于谦',
+          name: '《梦长安》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
         },
         {
-          name: '《人在江湖》郭德纲 于谦',
+          name: '《梦长安》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
         },
         {
-          name: '《人在江湖》郭德纲 于谦',
+          name: '《梦长安》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
         },
         {
-          name: '《人在江湖》郭德纲 于谦',
+          name: '《梦长安》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
         },
         {
-          name: '《人在江湖》郭德纲 于谦',
+          name: '《梦长安》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
         },
         {
-          name: '《人在江湖》郭德纲 于谦',
+          name: '《梦长安》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
         },
         {
-          name: '《人在江湖》郭德纲 于谦',
+          name: '《梦长安》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
@@ -145,20 +147,29 @@ export default {
       ],
       performanceInfo: [
         {
-          imgurl: 'http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg',
-          title: '边做游戏边学英语，好玩到停不下来',
-          author: '某某某',
+          imgurl: '/static/images/list/list3.jpg',
+          title: '寻迹古长安——古都城墙',
+          author: '王洛',
           num1: '767.6万',
           num2: '257'
         }
       ],
-      imgurl: 'http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg'
+      imgurl: '/static/images/list/list3.jpg',
+      isCollection: false
     }
   },
 
   components: {},
 
   methods: {
+    collectionHandle () {
+      this.isCollection = !this.isCollection
+      wx.showToast({
+        title: this.isCollection ? '收藏成功' : '取消收藏',
+        mask: true,
+        duration: 1000
+      })
+    },
     goPlayer (item) {
       console.log(item)
       wx.navigateTo({
@@ -190,7 +201,7 @@ export default {
 .bg{
   width: 100%;
   height: 410rpx;
-  filter: blur(30rpx);
+  filter: blur(80rpx);
 }
 .baritem {
   width: 100%;
@@ -219,7 +230,6 @@ export default {
 
 .themeinfo {
   width: 60%;
-  height: 200rpx;
 }
 
 .themetitle {
@@ -233,9 +243,18 @@ export default {
 }
 
 .themeauthor {
+  display: flex;
   font-size: 26rpx;
   color: #fff;
-  margin-top: 5rpx;
+  margin: 10rpx 0;
+  .nickname{
+    margin:0 8rpx;
+  }
+  img{
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+  }
 }
 
 .viewinfo {
@@ -260,7 +279,7 @@ export default {
   align-items: center;
   border-radius: 20rpx;
   float: right;
-  margin-top: 15rpx;
+  margin-top: 24rpx;
   button {
     width: 210rpx;
     height: 64rpx;
@@ -279,6 +298,10 @@ export default {
   .collection {
     color: #333;
     background: #fff;
+    &.active{
+      background: #ff520f;
+      color: #fff;
+    }
   }
 }
 
@@ -310,12 +333,15 @@ export default {
 
 .list {
   width: 50%;
+  span{
+    font-size: 32rpx;
+  }
 }
 
 .play {
   width: 100%;
   height: 100rpx;
-  padding: 0rpx 36rpx;
+  padding: 0rpx 30rpx;
   box-sizing: border-box;
   border-bottom: 1rpx solid #f1f1f1;
   display: flex;
@@ -345,11 +371,11 @@ export default {
   justify-content: flex-start;
   align-items: center;
   border-bottom: 1rpx solid #f1f1f1;
-  padding: 20rpx 20rpx;
+  padding: 20rpx 30rpx 20rpx 20rpx;
 }
 
 .performanceIndex {
-  width: 15%;
+  width: 12%;
   height: 80rpx;
   text-align: center;
   line-height: 80rpx;
@@ -357,7 +383,7 @@ export default {
 }
 
 .performanceInfo {
-  width: 85%;
+  width: 88%;
   height: 100%;
 }
 
@@ -378,22 +404,22 @@ export default {
   font-size: 25rpx;
   margin-top: 20rpx;
 }
-.active{
+.Performance .active{
   position: relative;
-  color: #333;
+  color: #ff520f;
 }
-.active::after{
+.Performance .active::after{
   content: '';
   width: 80rpx;
   height: 5rpx;
   position: absolute;
   bottom: 0rpx;
   left: 150rpx;
-  background-color: orangered;
+  background-color: #ff520f;
 }
 .detail-box{
   padding: 36rpx;
-  font-size: 30rpx;
+  font-size: 32rpx;
   image{
     max-width: 100%;
     margin: 10rpx 0;

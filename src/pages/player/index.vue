@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
     <div class="header">
-      <div class="title">第一集：田忌赛马</div>
+      <div class="title">第一集：梦回长安</div>
       <div class="views-box">
-        <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+        <img src="/static/images/index/ad2.jpg" alt="">
         <div class="views">194.6万</div>
       </div>
       <div class="slider-box">
@@ -24,20 +24,20 @@
       </div>
       <div class="like-box">
         <div class="item">
-          <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt=""><span>播放列表</span>
+          <img class="prev" src="/static/player/list.png" alt=""><span>播放列表</span>
         </div>
         <div class="item">
-          <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt=""><span>373</span>
+          <img class="prev" src="/static/player/share.png" alt=""><span>373</span>
         </div>
         <div class="item">
-          <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt=""><span>1.1万</span>
+          <img class="prev" src="/static/player/love.png" alt=""><span>1.1万</span>
         </div>
       </div>
     </div>
     <div class="collection-box">
-      <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+      <img src="/static/images/index/ad2.jpg" alt="">
       <div class="title-number">
-        <div class="title">米小圈动画成语课</div>
+        <div class="title">寻迹古长安——古都城墙</div>
         <div class="number">7.5万人收藏</div>
       </div>
       <div class="collection">
@@ -56,14 +56,14 @@
       <div class="comment-list">
         <div class="item">
           <div class="infor">
-            <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+            <img src="/static/images/index_icon4.png" alt="">
             <div class="name-time">
               <div class="name">宝宝巴士</div>
               <div class="time">2020-4-22</div>
             </div>
             <div class="zan-box">
               <div class="zan">5</div>
-              <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+              <img src="/static/player/zan.png" alt="">
             </div>
           </div>
           <div class="content">第一个评论</div>
@@ -71,14 +71,14 @@
         </div>
         <div class="item">
           <div class="infor">
-            <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+            <img src="/static/images/index_icon4.png" alt="">
             <div class="name-time">
               <div class="name">宝宝巴士</div>
               <div class="time">2020-4-22</div>
             </div>
             <div class="zan-box">
               <div class="zan">5</div>
-              <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+              <img src="/static/player/zan.png" alt="">
             </div>
           </div>
           <div class="content">第一个评论</div>
@@ -86,14 +86,14 @@
         </div>
         <div class="item">
           <div class="infor">
-            <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+             <img src="/static/images/index_icon4.png" alt="">
             <div class="name-time">
               <div class="name">宝宝巴士</div>
               <div class="time">2020-4-22</div>
             </div>
             <div class="zan-box">
               <div class="zan">5</div>
-              <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+              <img src="/static/player/zan.png" alt="">
             </div>
           </div>
           <div class="content">第一个评论</div>
@@ -228,7 +228,7 @@ export default {
       line-height: 50rpx;
       height: 50rpx;
       color: #fff;
-      background: rgba(0,0,0,.1);
+      background: rgba(0,0,0,.5);
       box-sizing: border-box;
     }
   }
@@ -273,7 +273,7 @@ export default {
       font-size: 28rpx;
       color: #bbb;
       img{
-        width: 75rpx;
+        width: 60rpx;
         height: 60rpx;
         margin-bottom: 20rpx;
       }
@@ -295,7 +295,7 @@ export default {
       display: flex;
       flex-direction: column;
       .title{
-        font-size: 36rpx;
+        font-size: 32rpx;
         color: #333;
       }
       .number{
@@ -306,13 +306,13 @@ export default {
     }
     .collection{
       margin-left: auto;
-      width: 180rpx;
+      width: 150rpx;
       color: #f86342;
-      font-size: 36rpx;
-      line-height: 72rpx;
+      font-size: 30rpx;
+      line-height: 60rpx;
       text-align: center;
       background: #ffece8;
-      border-radius: 42rpx;
+      border-radius: 30rpx;
     }
   }
   .comment-box{
@@ -355,6 +355,10 @@ export default {
           color: #999;
           .zan{
             margin-right: 10rpx;
+          }
+          img{
+            width: 36rpx;
+            height: 36rpx;
           }
         }
         .name-time{
