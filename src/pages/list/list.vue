@@ -20,11 +20,7 @@
             <div style="margin-right:25rpx;">
               <!-- 本例中33.2亿的单位是写死的，此处应该是后端返回数据吧 -->
               <text class="icon-video"></text>
-              <text class="">33.2亿</text>
-            </div>
-            <div>
-              <text class="icon"></text>
-              <text class="">44集</text>
+              <text class="">33.2万</text>
             </div>
           </div>
         </div>
@@ -294,7 +290,7 @@ export default {
 
   .content-title{
     font-size: 35rpx;
-    height: 40rpx;
+    // height: 40rpx;
     color: #000;
     display: -webkit-box;
     -webkit-line-clamp: 2;/*行数n*/
@@ -303,7 +299,7 @@ export default {
     text-overflow: ellipsis;
   }
   .content-text{
-    height: 40rpx;
+    // height: 40rpx;
     display: -webkit-box;
     -webkit-line-clamp: 1;/*行数n*/
     -webkit-box-orient: vertical;
