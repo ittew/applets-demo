@@ -42,36 +42,6 @@ export default {
           'albumCoverUrl290': '/static/images/list/list3.jpg',
           'title': '西安城墙',
           'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
-        },
-        {
-          'albumCoverUrl290': '/static/images/list/list1.jpg',
-          'title': '西安钟楼',
-          'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
-        },
-        {
-          'albumCoverUrl290': '/static/images/list/list2.jpeg',
-          'title': '西安小雁塔',
-          'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
-        },
-        {
-          'albumCoverUrl290': '/static/images/list/list3.jpg',
-          'title': '西安城墙',
-          'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
-        },
-        {
-          'albumCoverUrl290': '/static/images/list/list2.jpeg',
-          'title': '西安小雁塔',
-          'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
-        },
-        {
-          'albumCoverUrl290': '/static/images/list/list3.jpg',
-          'title': '西安城墙',
-          'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
-        },
-        {
-          'albumCoverUrl290': '/static/images/list/list1.jpg',
-          'title': '西安钟楼',
-          'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
         }
       ]
     }

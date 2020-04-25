@@ -7,8 +7,8 @@
     </div>
     <div class="top">
       <img class="topimg" src="../../../static/images/index_icon4.png"/>
-      <p class="toptit">德云社郭德纲相声VIP</p>
-      <p class="topfu">相声评书月度优质主播</p>
+      <p class="toptit">寻迹古长安——古都城墙</p>
+      <p class="topfu">月度优质主播</p>
       <div class="topno"><span class="topno_l">关注 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="topbor">|</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="topno_r">&nbsp;&nbsp;&nbsp;粉丝 1256.2万</span></div>
     </div>
     <div class="content">
@@ -45,49 +45,49 @@ export default {
           'hotRecommends': {
             'list': [
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group66/M02/5F/87/wKgMdV1k-SryG2bxAANsUR5aOuY490.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '《长宁帝军》| 江湖范儿热血爽文',
-                'trackTitle': '今日，谁与我共同浴血，谁就是我的兄弟'
+                'albumCoverUrl290': '/static/images/list/list1.jpg',
+                'title': '西安钟楼',
+                'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list2.jpeg',
+                'title': '西安小雁塔',
+                'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list3.jpg',
+                'title': '西安城墙',
+                'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list1.jpg',
+                'title': '西安钟楼',
+                'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list2.jpeg',
+                'title': '西安小雁塔',
+                'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list3.jpg',
+                'title': '西安城墙',
+                'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list2.jpeg',
+                'title': '西安小雁塔',
+                'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list3.jpg',
+                'title': '西安城墙',
+                'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
               },
               {
-                'albumCoverUrl290': 'http://imagev2.xmcdn.com/group59/M0A/AE/A4/wKgLel0_6jSB96guAAQiVnZ8T6o580.jpg!op_type=5&upload_type=album&device_type=ios&name=medium&magick=png',
-                'title': '绝世高手【头陀渊】免费有声小说',
-                'trackTitle': '男女双播，都市玄幻，修真神作'
+                'albumCoverUrl290': '/static/images/list/list1.jpg',
+                'title': '西安钟楼',
+                'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
               }
             ]
           }
@@ -145,7 +145,7 @@ page {
     border-radius: 10rpx;
   }
   .backcon {
-    position: absolute;
+    position: fixed;
     top: 30rpx;
     right: 55rpx;
     z-index: 100;
