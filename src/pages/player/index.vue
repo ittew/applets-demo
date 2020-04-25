@@ -7,7 +7,7 @@
         <div class="views">194.6万</div>
       </div>
       <div class="slider-box">
-        <slider @change="sliderChange" :value="myAudioPos" block-size='10' block-color='#e97b6a' backgroundColor="#d8d8d8" activeColor="#e97b6a"
+        <slider @touchstart="startHandle" @change="sliderChange" :value="myAudioPos" block-size='10' block-color='#e97b6a' backgroundColor="#d8d8d8" activeColor="#e97b6a"
         />
         <div class="time">
           <div class="current-time">{{myAudioCurrent}}</div>
@@ -22,26 +22,82 @@
         <img class="pause" @tap="pauseHandle" v-show="isPlay" src="/static/player/play.png" alt="">
         <img class="next" src="/static/player/next.png" alt="">
       </div>
-    </div>
-    <div class="view-info">
-      <div class="item">
-        <img src="" alt=""><span>播放列表</span>
-      </div>
-      <div class="item">
-        <img src="" alt=""><span>373</span>
-      </div>
-      <div class="item">
-        <img src="" alt=""><span>1.1万</span>
-      </div>
-      <div class="collection-box">
-        <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
-        <div class="title-number">
-          <div class="title">米小圈动画成语课</div>
-          <div class="number">7.5万人收藏</div>
+      <div class="like-box">
+        <div class="item">
+          <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt=""><span>播放列表</span>
         </div>
-        <div class="collection">
-          <span></span>
-          <span>收藏</span>
+        <div class="item">
+          <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt=""><span>373</span>
+        </div>
+        <div class="item">
+          <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt=""><span>1.1万</span>
+        </div>
+      </div>
+    </div>
+    <div class="collection-box">
+      <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+      <div class="title-number">
+        <div class="title">米小圈动画成语课</div>
+        <div class="number">7.5万人收藏</div>
+      </div>
+      <div class="collection">
+        <span></span>
+        <span>收藏</span>
+      </div>
+    </div>
+    <div class="comment-box">
+      <div class="all">
+        <div class="title">
+          <span>全部评论</span>
+          <span>(177)</span>
+        </div>
+        <div class="btn">写评论</div>
+      </div>
+      <div class="comment-list">
+        <div class="item">
+          <div class="infor">
+            <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+            <div class="name-time">
+              <div class="name">宝宝巴士</div>
+              <div class="time">2020-4-22</div>
+            </div>
+            <div class="zan-box">
+              <div class="zan">5</div>
+              <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+            </div>
+          </div>
+          <div class="content">第一个评论</div>
+          <div class="replay"></div>
+        </div>
+        <div class="item">
+          <div class="infor">
+            <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+            <div class="name-time">
+              <div class="name">宝宝巴士</div>
+              <div class="time">2020-4-22</div>
+            </div>
+            <div class="zan-box">
+              <div class="zan">5</div>
+              <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+            </div>
+          </div>
+          <div class="content">第一个评论</div>
+          <div class="replay"></div>
+        </div>
+        <div class="item">
+          <div class="infor">
+            <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+            <div class="name-time">
+              <div class="name">宝宝巴士</div>
+              <div class="time">2020-4-22</div>
+            </div>
+            <div class="zan-box">
+              <div class="zan">5</div>
+              <img src="http://imagev2.xmcdn.com/group59/M01/AC/BB/wKgLel0_rnmAmP1hAAgVnsU0jxA823.jpg" alt="">
+            </div>
+          </div>
+          <div class="content">第一个评论</div>
+          <div class="replay"></div>
         </div>
       </div>
     </div>
@@ -64,6 +120,10 @@ export default {
   },
 
   methods: {
+    startHandle () {
+      console.log('startHandle')
+      this.myAudio.offTimeUpdate() // 取消事件 防止和slider滑动位置出现跳动问题
+    },
     // 滑块滑动完成事件
     sliderChange (e) {
       // 当前slider滑动的距离
@@ -74,10 +134,6 @@ export default {
       console.log(currentTime, 'currentTime')
       this.myAudio.seek(currentTime)
       console.log(this.myAudio.currentTime, 'this.myAudio.currentTime')
-      // 传入空函数暂时不执行实时监听播放进度更新事件 防止和slider滑动位置出现跳动问题
-      // this.myAudio.onTimeUpdate(function(){})
-      // 更新当前已播放时间
-      // this.myAudioCurrent = this.format(currentTime)
       this.updateTime()
     },
     // 播放
@@ -113,7 +169,7 @@ export default {
 
   created () {
     this.myAudio = wx.createInnerAudioContext()
-    this.myAudio.src = 'http://ws.stream.qqmusic.qq.com/C400001xLIXo2w9V7U.m4a?guid=7202258340&vkey=2203B4A0922854C0F9CE18933C0D8C452F9A026CF9166463AF7443918543AAC6F902DD9165F6D72168D5538140AD294D53525519B0B702CF&uin=7347&fromtag=66'
+    this.myAudio.src = 'https://m10.music.126.net/20200425151346/cf6ded54a65078fb42e004f7d382d193/yyaac/obj/wonDkMOGw6XDiTHCmMOi/2156190614/159d/2831/2c24/34f1debc58669322c130a6f1c22f2cda.m4a'
     this.myAudio.title = 'Cannon'
     console.log(this.myAudio)
     // 在onCanplay里获取并设置音频时长和播放进度
@@ -129,6 +185,7 @@ export default {
     // 播放完成处理，按钮变一下
     this.myAudio.onEnded((res) => {
       this.myAudioPos = 0
+      this.myAudioCurrent = '00:00'
       this.isPlay = false
     })
   }
@@ -137,14 +194,14 @@ export default {
 
 <style scoped lang='scss'>
 .wrapper{
+  background: #f4f4f4;
   .header{
-    background: #f4f4f4;
-  }
-  .title{
-    font-size: 40rpx;
-    font-weight: bold;
-    text-align: center;
-    padding: 56rpx 0;
+    .title{
+      font-size: 40rpx;
+      font-weight: bold;
+      text-align: center;
+      padding: 56rpx 0;
+    }
   }
   .views-box{
     border-radius: 10rpx;
@@ -172,7 +229,8 @@ export default {
     }
   }
   .player-box{
-    margin-top: 60px;
+    background: #fff;
+    padding-top: 80rpx;
     .controls{
       height: 90rpx;
       display: flex;
@@ -196,6 +254,122 @@ export default {
       justify-content: space-between;
       padding: 0 36rpx;
       font-size: 28rpx;
+    }
+  }
+  .like-box{
+    display: flex;
+    justify-content: center;
+    padding: 60rpx 0 80rpx;
+    .item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 40rpx;
+      font-size: 28rpx;
+      color: #bbb;
+      img{
+        width: 75rpx;
+        height: 60rpx;
+        margin-bottom: 20rpx;
+      }
+    }
+  }
+  .collection-box{
+    margin: 12rpx 0;
+    padding: 0 20rpx;
+    height: 160rpx;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    img{
+      width: 120rpx;
+      height: 120rpx;
+      margin-right: 30rpx;
+    }
+    .title-number{
+      display: flex;
+      flex-direction: column;
+      .title{
+        font-size: 36rpx;
+        color: #333;
+      }
+      .number{
+        font-size: 30rpx;
+        margin-top: 20rpx;
+        color: #999;
+      }
+    }
+    .collection{
+      margin-left: auto;
+      width: 180rpx;
+      color: #f86342;
+      font-size: 36rpx;
+      line-height: 72rpx;
+      text-align: center;
+      background: #ffece8;
+      border-radius: 42rpx;
+    }
+  }
+  .comment-box{
+    background: #fff;
+    padding: 40rpx 20rpx;
+    .all{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .title{
+        font-weight: bold;
+        font-size:30rpx;
+      }
+    }
+    .btn{
+      border: 1px solid orangered;
+      color: orangered;
+      border-radius: 50rpx;
+      line-height: 50rpx;
+      font-size: 28rpx;
+      padding: 0 20rpx;
+    }
+  }
+  .comment-list{
+    margin-top: 30rpx;
+    .item{
+      margin-bottom: 30rpx;
+      .infor{
+        display: flex;
+        align-items: center;
+        img{
+          width: 60rpx;
+          height: 60rpx;
+        }
+        .zan-box{
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          font-size: 24rpx;
+          color: #999;
+          .zan{
+            margin-right: 10rpx;
+          }
+        }
+        .name-time{
+          margin-left: 20rpx;
+          .name{
+            font-size: 26rpx;
+            color: #666;
+          }
+          .time{
+            font-size: 24rpx;
+            color: #999;
+          }
+        }
+      }
+    }
+    .content{
+      padding:20rpx 0 20rpx 76rpx;
+      font-size: 28rpx;
+      border-bottom: 1px solid #dddddd;
     }
   }
 }

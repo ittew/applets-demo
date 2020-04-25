@@ -1,6 +1,6 @@
 {
   "pages": [
-
+    "pages/player/main",
     "pages/index/main",
     "pages/perAnchor/main",
     "pages/detail/main",
@@ -9,7 +9,6 @@
     "pages/classification/main",
     "pages/collection/main",
     "pages/user/main",
-    "pages/player/main",
     "pages/list/main"
   ],
   "window": {
