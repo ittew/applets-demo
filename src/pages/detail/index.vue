@@ -147,14 +147,14 @@ export default {
       ],
       performanceInfo: [
         {
-          imgurl: '/static/images/list/list3.jpg',
+          imgurl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587822989351&di=32a4d1fd9ef8ffe2c292c2083573bdbf&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg',
           title: '寻迹古长安——古都城墙',
           author: '王洛',
           num1: '767.6万',
           num2: '257'
         }
       ],
-      imgurl: '/static/images/list/list3.jpg',
+      imgurl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587822989351&di=32a4d1fd9ef8ffe2c292c2083573bdbf&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg',
       isCollection: false
     }
   },
@@ -201,7 +201,8 @@ export default {
 .bg{
   width: 100%;
   height: 410rpx;
-  filter: blur(80rpx);
+  -webkit-filter:blur(30rpx);
+  filter: blur(30rpx);
 }
 .baritem {
   width: 100%;
