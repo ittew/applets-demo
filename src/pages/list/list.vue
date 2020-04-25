@@ -148,47 +148,47 @@ export default {
           'hotRecommends': {
             'list': [
               {
-                'albumCoverUrl290': '/static/images/index/ed1.png',
+                'albumCoverUrl290': '/static/images/index/ed1.jpg',
                 'title': '面授在线一致化',
                 'trackTitle': '无论面授课还是在线课，我们都是同一套教材编写、教师培训体系，保证线上线下一致化。'
               },
               {
-                'albumCoverUrl290': '/static/images/index/ed2.png',
+                'albumCoverUrl290': '/static/images/index/ed2.jpg',
                 'title': '教师教研本地化',
                 'trackTitle': '依托线下教学教研体系，专注本地化的学情研究，优选本地高端师资，更适合本地孩子'
               },
               {
-                'albumCoverUrl290': '/static/images/index/ed3.png',
+                'albumCoverUrl290': '/static/images/index/ed3.jpg',
                 'title': '专属班主任服务',
                 'trackTitle': '授课内容针对孩子存在的障碍专项讲解，课上高频互动，关注每个孩子的学习吸收情况。'
               },
               {
-                'albumCoverUrl290': '/static/images/index/ed1.png',
+                'albumCoverUrl290': '/static/images/index/ed1.jpg',
                 'title': '面授在线一致化',
                 'trackTitle': '无论面授课还是在线课，我们都是同一套教材编写、教师培训体系，保证线上线下一致化。'
               },
               {
-                'albumCoverUrl290': '/static/images/index/ed2.png',
+                'albumCoverUrl290': '/static/images/index/ed2.jpg',
                 'title': '教师教研本地化',
                 'trackTitle': '依托线下教学教研体系，专注本地化的学情研究，优选本地高端师资，更适合本地孩子'
               },
               {
-                'albumCoverUrl290': '/static/images/index/ed3.png',
+                'albumCoverUrl290': '/static/images/index/ed3.jpg',
                 'title': '专属班主任服务',
                 'trackTitle': '授课内容针对孩子存在的障碍专项讲解，课上高频互动，关注每个孩子的学习吸收情况。'
               },
               {
-                'albumCoverUrl290': '/static/images/index/ed1.png',
+                'albumCoverUrl290': '/static/images/index/ed1.jpg',
                 'title': '面授在线一致化',
                 'trackTitle': '无论面授课还是在线课，我们都是同一套教材编写、教师培训体系，保证线上线下一致化。'
               },
               {
-                'albumCoverUrl290': '/static/images/index/ed2.png',
+                'albumCoverUrl290': '/static/images/index/ed2.jpg',
                 'title': '教师教研本地化',
                 'trackTitle': '依托线下教学教研体系，专注本地化的学情研究，优选本地高端师资，更适合本地孩子'
               },
               {
-                'albumCoverUrl290': '/static/images/index/ed3.png',
+                'albumCoverUrl290': '/static/images/index/ed3.jpg',
                 'title': '专属班主任服务',
                 'trackTitle': '授课内容针对孩子存在的障碍专项讲解，课上高频互动，关注每个孩子的学习吸收情况。'
               }
