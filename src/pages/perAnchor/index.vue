@@ -1,5 +1,10 @@
 <template>
   <div class="main">
+    <div class="gotoIndex"></div>
+    <div class="backcon" @tap="gotoIndexpage">
+      <img src="../../../static/images/back.png"/>
+      <span>首页</span>
+    </div>
     <div class="top">
       <img class="topimg" src="../../../static/images/index_icon4.png"/>
       <p class="toptit">德云社郭德纲相声VIP</p>
@@ -8,7 +13,7 @@
     </div>
     <div class="content">
       <p class="contitle">专辑作品</p>
-      <div class="content-item"  v-for="(item,index) in currentList" :key="index">
+      <div class="content-item" @tap="gotoDetails" v-for="(item,index) in currentList" :key="index">
         <image :src="item.albumCoverUrl290"></image>
         <div class="content-left">
           <div class="content-title">{{item.title}}</div>
@@ -25,9 +30,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="conlist">
-
       </div>
     </div>
   </div>
@@ -101,6 +103,20 @@ export default {
   },
 
   methods: {
+    // 跳转首页
+    gotoIndexpage () {
+      wx.switchTab({
+        url: '/pages/index/main'
+      })
+    },
+    // 跳转商品详情页面
+    gotoDetails () {
+      // var url = e.currentTarget.dataset.coverimg
+      // var title = e.currentTarget.dataset.title
+      wx.navigateTo({
+        url: '/pages/detail/main'
+      })
+    }
   },
 
   created () {
@@ -117,6 +133,34 @@ page {
 .main {
   width: 100%;
   height: auto;
+  .gotoIndex {
+    position: fixed;
+    top: 40rpx;
+    right: 50rpx;
+    background-color: #000;
+    width: 100rpx;
+    height: 40rpx;
+    opacity: 0.1;
+    z-index: 99;
+    border-radius: 10rpx;
+  }
+  .backcon {
+    position: absolute;
+    top: 30rpx;
+    right: 55rpx;
+    z-index: 100;
+    img {
+      width: 30rpx;
+      height: 30rpx;
+      vertical-align: middle;
+    }
+    span {
+      font-size: 26rpx;
+      color: #fff;
+      padding-left: 10rpx;
+      vertical-align: middle;
+    }
+  }
   .top {
     width: 100%;
     height: 356rpx;
