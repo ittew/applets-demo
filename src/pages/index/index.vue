@@ -57,7 +57,7 @@
               <div class="introduction">{{item.trackTitle}}</div>
             </div>
             <div class="count">
-              <div class="jicount"> {{item.tracks}}万 <span>1523集</span></div>
+              <div class="jicount"><img class="peoimg" src="../../../static/images/voice.png">{{item.tracks}}万 <img class="jiimg" src="../../../static/images/count.png"><span>1523集</span></div>
             </div>
           </div>
         </div>
@@ -261,7 +261,7 @@ export default {
     float: right;
     font-size: 26rpx;
     color: #aaa;
-
+    padding-top: 6rpx;
   }
   .icon-right {
     // background: url("") no-repeat center center;
@@ -303,6 +303,7 @@ export default {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 0 10rpx;
   }
   .likecover{
     width: 190rpx;
@@ -366,7 +367,7 @@ export default {
   }
   .titleText{
     width: 100%;
-    font-size: 35rpx;
+    font-size: 32rpx;
     color: #333;
     text-align: left;
     display: -webkit-box;
@@ -398,5 +399,18 @@ export default {
   .jicount{
     font-size: 25rpx;
     color: #cdcdcd;
+    vertical-align: middle;
+    .peoimg{
+      width: 30rpx;
+      height: 26rpx;
+      margin-top: 6rpx;
+      vertical-align: top;
+    }
+    .jiimg{
+      width: 30rpx;
+      height: 25rpx;
+      margin-left: 25rpx;
+      vertical-align: middle;
+    }
   }
 </style>
