@@ -214,7 +214,7 @@ page {
     .contitle {
       font-size: 35rpx;
       color: #333;
-      padding: 30rpx 0 30rpx 35rpx;
+      padding: 30rpx 0 0 35rpx;
     }
     .content-item{
       width: 100%;
