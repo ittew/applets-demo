@@ -149,8 +149,8 @@ login::after {
 }
 
 .avatarImg {
-    width: 120rpx;
-    height: 120rpx;
+    width: 110rpx;
+    height: 110rpx;
     border-radius: 50%;
 }
 

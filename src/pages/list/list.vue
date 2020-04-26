@@ -37,8 +37,8 @@ export default {
       currentTab: 0,
       navTitle: [
         {title: '猜你喜欢'},
-        {title: '陕西旅游'},
-        {title: '陕西教育'}
+        {title: '红色旅游'},
+        {title: '教育之声'}
       ],
       currentList: [],
       listData: [
@@ -227,6 +227,7 @@ export default {
     width: 100%;
     height: 80rpx;
     display: flex;
+    margin-bottom: 10rpx;
   }
   .navigate-item {
     flex:1;
@@ -262,7 +263,7 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20rpx 0rpx;
+    padding: 10rpx 20rpx;
   }
 
   .indexNumber {
@@ -283,7 +284,7 @@ export default {
 
   .content-left {
     padding: 10rpx 0rpx;
-    width: 70%;
+    width: 73%;
     height: auto;
     border-bottom: 1rpx solid #f1f1f1;
   }

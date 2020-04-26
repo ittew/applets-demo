@@ -25,7 +25,7 @@
     </div>
     <!-- 猜你喜欢 -->
     <div class="like">
-      <div class="barTitle">
+      <div class="barTitle padbot20">
         <div class="Title-left">猜你喜欢</div>
         <div class="Title-right" @tap="gotoList(1)">查看全部 <span class="icon-right"></span> </div>
       </div>
@@ -50,9 +50,7 @@
       </div>
       <div v-for="(item,index) in v.list" :key="index">
         <div class="content" @tap="gotoDetails">
-          <div class="contentImg">
-            <image :src="item.albumCoverUrl290" mode="widthFix"></image>
-          </div>
+          <image class="contentImg" :src="item.albumCoverUrl290" mode="widthFix"></image>
           <div class="content-right">
             <div class="content-title">
               <div class="titleText">{{item.title}}</div>
@@ -95,7 +93,7 @@ export default {
       ],
       content: [
         {
-          title: '陕西旅游',
+          title: '红色旅游',
           list: [
             {
               'albumCoverUrl290': 'https://pic.qyer.com/album/user/3603/99/Qk9VQRMOZUk/index/180180',
@@ -118,7 +116,7 @@ export default {
           ]
         },
         {
-          title: '陕西教育',
+          title: '教育之声',
           list: [
             {
               'albumCoverUrl290': '/static/images/index/ed1.jpg',
@@ -198,7 +196,7 @@ export default {
     width: 90%;
     height: 280rpx;
     margin: 0rpx auto;
-    margin-top: 30px;
+    margin-top: 40rpx;
     position: relative;
     border-radius: 15rpx;
     overflow: hidden;
@@ -247,8 +245,11 @@ export default {
   .barTitle {
     width: 100%;
     height: 56rpx;
-    padding: 20rpx 0rpx;
+    padding-top: 20rpx;
     text-align: center;
+  }
+  .padbot20{
+    padding-bottom: 20rpx;
   }
   .Title-left {
     float: left;
@@ -271,7 +272,7 @@ export default {
   .like{
     width: 90%;
     margin: 0rpx auto;
-    margin-top: 40rpx;
+    margin-top: 20rpx;
   }
   .likeItemBox{
     width: 100%;
@@ -281,7 +282,7 @@ export default {
   }
   .likeItem{
     width: 210rpx;
-    height: 310rpx;
+    height: 270rpx;
     border-radius: 15rpx;
   }
   .likeimg{
@@ -348,12 +349,7 @@ export default {
   }
   .contentImg{
     width: 232rpx;
-    height: 232rpx;
-    border-radius: 15rpx;
-  }
-  .contentImg>image{
-    width: 100%;
-    height: 100%;
+    height: 210rpx;
     border-radius: 15rpx;
   }
   .content-right{

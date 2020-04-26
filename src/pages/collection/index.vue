@@ -68,7 +68,7 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20rpx 0rpx;
+    padding: 10rpx 20rpx;
   }
   .content-item image {
     width: 150rpx;
@@ -79,14 +79,13 @@ export default {
 
   .content-left {
     padding: 10rpx 0rpx;
-    width: 70%;
+    width: 73%;
     height: auto;
     border-bottom: 1rpx solid #f1f1f1;
   }
 
   .content-title{
     font-size: 35rpx;
-    height: 40rpx;
     color: #000;
     display: -webkit-box;
     -webkit-line-clamp: 2;/*行数n*/
@@ -95,7 +94,6 @@ export default {
     text-overflow: ellipsis;
   }
   .content-text{
-    height: 40rpx;
     display: -webkit-box;
     -webkit-line-clamp: 1;/*行数n*/
     -webkit-box-orient: vertical;

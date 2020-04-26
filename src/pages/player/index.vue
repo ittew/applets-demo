@@ -45,6 +45,10 @@
         <span>收藏</span>
       </div>
     </div>
+    <div class="introcon">
+      <p class="intro-tit">主播 王洛 梦回长安精选</p>
+      <p class="intro-con">西安城墙是中国现存规模最大、保存最完整的古代城垣。现存城墙为明代建筑，全长13.7千米，始建于明太祖洪武三年（1370年），洪武十一年（1378年）竣工，是在明太祖“高筑墙、广积粮、缓称王”的政策指导下，在隋、唐皇城的基础上建成的，当时是西安的府城。</p>
+    </div>
     <div class="comment-box">
       <div class="all">
         <div class="title">
@@ -72,6 +76,21 @@
         <div class="item">
           <div class="infor">
             <img src="/static/images/index_icon4.png" alt="">
+            <div class="name-time">
+              <div class="name">宝宝巴士</div>
+              <div class="time">2020-4-22</div>
+            </div>
+            <div class="zan-box">
+              <div class="zan">5</div>
+              <img src="/static/player/zan.png" alt="">
+            </div>
+          </div>
+          <div class="content">第一个评论</div>
+          <div class="replay"></div>
+        </div>
+        <div class="item">
+          <div class="infor">
+             <img src="/static/images/index_icon4.png" alt="">
             <div class="name-time">
               <div class="name">宝宝巴士</div>
               <div class="time">2020-4-22</div>
@@ -204,15 +223,15 @@ export default {
       font-size: 40rpx;
       font-weight: bold;
       text-align: center;
-      padding: 56rpx 0;
+      padding: 50rpx 0;
     }
   }
   .views-box{
     border-radius: 10rpx;
-    width: 360rpx;
-    height: 360rpx;
+    width: 340rpx;
+    height: 340rpx;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0 auto 60rpx;
     position: relative;
     img{
       width: 100%;
@@ -252,18 +271,19 @@ export default {
     }
   }
   .slider-box{
-    padding-bottom: 40rpx;
+    padding-bottom: 30rpx;
     .time{
       display: flex;
       justify-content: space-between;
       padding: 0 36rpx;
       font-size: 28rpx;
+      margin-top: -20rpx;
     }
   }
   .like-box{
     display: flex;
     justify-content: center;
-    padding: 60rpx 0 80rpx;
+    padding: 40rpx 0;
     .item{
       display: flex;
       flex-direction: column;
@@ -273,9 +293,9 @@ export default {
       font-size: 28rpx;
       color: #bbb;
       img{
-        width: 60rpx;
-        height: 60rpx;
-        margin-bottom: 20rpx;
+        width: 40rpx;
+        height: 40rpx;
+        margin-bottom: 6rpx;
       }
     }
   }
@@ -313,6 +333,22 @@ export default {
       text-align: center;
       background: #ffece8;
       border-radius: 30rpx;
+    }
+  }
+  .introcon{
+    background: #fff;
+    padding: 20rpx;
+    margin-bottom: 12rpx;
+    p{
+      font-size:30rpx;
+    }
+    .intro-tit{
+      color:#333;
+      padding-bottom: 30rpx;
+    }
+    .intro-con{
+      color:#999;
+      line-height: 40rpx;
     }
   }
   .comment-box{

@@ -214,14 +214,14 @@ page {
     .contitle {
       font-size: 35rpx;
       color: #333;
-      padding: 30rpx 0 30rpx 25rpx;
+      padding: 30rpx 0 30rpx 35rpx;
     }
     .content-item{
       width: 100%;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 20rpx 0rpx;
+      padding: 10rpx 20rpx;
     }
 
     .content-item image {
@@ -233,14 +233,13 @@ page {
 
     .content-left {
       padding: 10rpx 0rpx;
-      width: 68%;
+      width: 73%;
       height: auto;
       border-bottom: 1rpx solid #f1f1f1;
     }
 
     .content-title{
       font-size: 35rpx;
-      height: 40rpx;
       color: #000;
       display: -webkit-box;
       -webkit-line-clamp: 2;/*行数n*/
@@ -249,7 +248,6 @@ page {
       text-overflow: ellipsis;
     }
     .content-text{
-      height: 40rpx;
       display: -webkit-box;
       -webkit-line-clamp: 1;/*行数n*/
       -webkit-box-orient: vertical;
