@@ -3,8 +3,17 @@
     <div class="header">
       <div class="title">第一集：梦回长安</div>
       <div class="views-box">
-        <img src="/static/images/index/ad2.jpg" alt="">
-        <div class="views">194.6万</div>
+        <img class="view-img" src="/static/images/index/ad2.jpg" alt="">
+        <div class="view-con">
+          <div class="views views1">
+            <img class="view-ji" src="/static/player/voice.png" alt="">
+            64.3万
+          </div>
+          <div class="views">
+            <img class="view-vo" src="/static/player/line.png" alt="">
+            194.6万
+          </div>
+        </div>
       </div>
       <div class="slider-box">
         <slider @touchstart="startHandle" @change="sliderChange" :value="myAudioPos" block-size='10' block-color='#e97b6a' backgroundColor="#d8d8d8" activeColor="#e97b6a"
@@ -31,6 +40,12 @@
         </div>
         <div class="item">
           <img class="prev" src="/static/player/love.png" alt=""><span>1.1万</span>
+        </div>
+        <div class="item">
+          <img class="prev" src="/static/player/comment.png" alt=""><span>5.3万</span>
+        </div>
+        <div class="item">
+          <img class="prev" src="/static/player/zan.png" alt=""><span>3.2万</span>
         </div>
       </div>
     </div>
@@ -223,42 +238,59 @@ export default {
       font-size: 40rpx;
       font-weight: bold;
       text-align: center;
-      padding: 50rpx 0;
+      padding: 40rpx 0;
     }
   }
   .views-box{
     border-radius: 10rpx;
-    width: 340rpx;
-    height: 340rpx;
+    width: 300rpx;
+    height: 300rpx;
     overflow: hidden;
-    margin: 0 auto 60rpx;
+    margin: 0 auto 20rpx;
     position: relative;
-    img{
+    .view-img{
       width: 100%;
       height: 100%;
     }
-    .views{
+    .view-con{
+      display: flex;
+      justify-content: space-between;
       position: absolute;
       bottom: 0;
+      background: rgba(0,0,0,.5);
       width: 100%;
+    }
+    .view-ji,.view-vo{
+      width: 30rpx;
+      height: 30rpx;
+      vertical-align: middle;
+    }
+    .view-ji{
+      margin-top: -6rpx;
+    }
+    .views{
+      flex:1;
       font-size: 24rpx;
       text-align: right;
       padding-right: 10rpx;
       line-height: 50rpx;
       height: 50rpx;
       color: #fff;
-      background: rgba(0,0,0,.5);
       box-sizing: border-box;
+      padding-left: 10rpx;
+    }
+    .views1{
+      text-align: left;
     }
   }
   .player-box{
     background: #fff;
-    padding-top: 80rpx;
+    padding-top: 50rpx;
     .controls{
       height: 90rpx;
       display: flex;
       justify-content: space-between;
-      padding:0 175rpx;
+      padding:0 225rpx;
       align-items: center;
     }
     .next,.prev{
@@ -271,7 +303,7 @@ export default {
     }
   }
   .slider-box{
-    padding-bottom: 30rpx;
+    padding-bottom: 10rpx;
     .time{
       display: flex;
       justify-content: space-between;
@@ -283,14 +315,14 @@ export default {
   .like-box{
     display: flex;
     justify-content: center;
-    padding: 40rpx 0;
+    padding: 20rpx 0;
     .item{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 0 40rpx;
-      font-size: 28rpx;
+      margin: 0 20rpx;
+      font-size: 22rpx;
       color: #bbb;
       img{
         width: 40rpx;
