@@ -96,21 +96,21 @@ export default {
           title: '红色旅游',
           list: [
             {
-              'albumCoverUrl290': 'https://pic.qyer.com/album/user/3603/99/Qk9VQRMOZUk/index/180180',
-              'title': '华清宫',
-              'trackTitle': '高高骊山上有宫，朱楼紫殿三四重,包括原骊山国家森林公园，与颐和园、圆明园、承德避暑山庄并称为中国四大皇家园林。',
+              'albumCoverUrl290': 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1963510029,3807888424&fm=26&gp=0.jpg',
+              'title': '秦始皇兵马俑',
+              'trackTitle': '兵马俑，亦简称秦兵马俑或秦俑，第一批全国重点文物保护单位，第一批中国世界遗产，位于今陕西省西安市临潼区秦始皇陵以东1.5千米处的兵马俑坑内。',
               'tracks': 100
             },
             {
-              'albumCoverUrl290': 'https://pic.qyer.com/album/user/863/65/SU9WRB8OaA/index/180180',
-              'title': '秦岭野生动物园',
-              'trackTitle': '秦岭北麓。野生动物园。古城旅游的一颗璀璨明珠。动物园依托秦岭北麓良好的生态环境，位于秦岭北麓浅山地带，距西安市区28公里实现野生动物大种群保护，展养动物300余种。',
+              'albumCoverUrl290': 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1374130408,3114584651&fm=26&gp=0.jpg',
+              'title': '大雁塔',
+              'trackTitle': '大雁塔作为现存最早、规模最大的唐代四方楼阁式砖塔，是佛塔这种古印度佛寺的建筑形式随佛教传入中原地区，并融入华夏文化的典型物证，是凝聚了中国古代劳动人民智慧结晶的标志性建筑。',
               'tracks': 110
             },
             {
-              'albumCoverUrl290': 'https://pic.qyer.com/album/user/3637/52/Qk9WRR8FYUs/index/180180',
-              'title': '曲江海洋极地公园',
-              'trackTitle': '欢乐的海洋之旅，将洗去你冬日的阴霾,，其规模及展示水平可跻身国内海洋馆前五位。',
+              'albumCoverUrl290': 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=705007648,889284190&fm=15&gp=0.jpg',
+              'title': '陕西历史博物馆',
+              'trackTitle': '陕西历史博物馆，中国第一座大型现代化国家级博物馆，首批中国“AAAA”级旅游景点，被誉为“古都明珠，华夏宝库”。位于陕西省西安市雁塔区小寨东路91号，大雁塔西北侧。馆藏文物171.795万件',
               'tracks': 120
             }
           ]
@@ -134,6 +134,29 @@ export default {
               'albumCoverUrl290': '/static/images/index/ed1.jpg',
               'title': '专属班主任服务',
               'trackTitle': '授课内容针对孩子存在的障碍专项讲解，课上高频互动，关注每个孩子的学习吸收情况。',
+              'tracks': 120
+            }
+          ]
+        },
+        {
+          title: '党建之声',
+          list: [
+            {
+              'albumCoverUrl290': 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1201159634,4198433506&fm=26&gp=0.jpg',
+              'title': '巡察组开展座谈活动',
+              'trackTitle': '陕西党委第一巡察组于2019年12月10日在被巡察单位控制技术学院开展个别谈话与座谈活动。个别谈话分两组进行，分别由巡察组杨雪琴组长和胡全裕副组长组织开展。',
+              'tracks': 100
+            },
+            {
+              'albumCoverUrl290': 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3222263570,387870150&fm=11&gp=0.jpg',
+              'title': '“访雨花英烈，忆初心使命”主题党日活动',
+              'trackTitle': '为深入开展“不忘初心 牢记使命”主题教育，进一步坚定理想信念，传承先烈精神，笃行使命担当，12月7日，控制技术学院党总支组织教工党员一行23人，赴南京雨花台开展“访雨花英烈，忆初心使命”主题党日活动。',
+              'tracks': 110
+            },
+            {
+              'albumCoverUrl290': 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1388856401,2817763086&fm=26&gp=0.jpg',
+              'title': '党课宣讲活动',
+              'trackTitle': '第一、二党支部在工业中心409开展“领学党章” 及“深刻领悟成功之道，不忘初心牢记使命”支部书记党课专题宣讲，支部全体党员参加了本次学习。',
               'tracks': 120
             }
           ]

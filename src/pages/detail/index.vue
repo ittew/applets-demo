@@ -5,14 +5,13 @@
       <div class="bg" :style="{'background-image':'url('+imgurl+')','background-size': '100% 100%', 'background-repeat': 'no-repeat'}"></div>
       <!-- 内容 -->
       <div class="baritem" v-for="(item, index) in performanceInfo" :key="index">
-        <div class="baritemtop">
+        <div class="baritemtop" @tap="goPerachor">
           <div class="themebgimg" :style="{'background-image':'url('+item.imgurl+')','background-size':'100% 100%'}"></div>
           <div class="themeinfo">
             <div class="themetitle">{{item.title}}</div>
-            <div class="themeauthor" @tap="goPerachor">
+            <div class="themeauthor">
               <img src="/static/images/index_icon4.png" alt="">
-              <span class="nickname">{{item.author}}</span>
-              <span class="icon-right">></span>
+              <span class="nickname">走进主播>>{{item.author}}</span>
             </div>
             <div class="viewinfo">
               <div class="viewinfoleft">{{item.num1}}人收藏</div>
@@ -35,7 +34,8 @@
       </div>
       <div class="tabs-box">
         <div class="detail-box" v-show="currentIndex == 1">
-          <p>西安城墙是中国现存规模最大、保存最完整的古代城垣。现存城墙为明代建筑，全长13.7千米，始建于明太祖洪武三年（1370年），洪武十一年（1378年）竣工，是在明太祖“高筑墙、广积粮、缓称王”的政策指导下，在隋、唐皇城的基础上建成的，当时是西安的府城。明太祖朱元璋将次子朱樉册封为秦王，藩封、府治同在一城，因而城池规模宏大坚固，再加上后来明清屡次修葺、增建，至今保存完好。</p>
+          <p>西安城墙是中国现存规模最大、保存最完整的古代城垣。现存城墙为明代建筑，全长13.7千米，始建于明太祖洪武三年（1370年），洪武十一年（1378年）竣工，是在明太祖“高筑墙、广积粮、缓称王”的政策指导下，在隋、唐皇城的基础上建成的，当时是西安的府城。明太祖朱元璋将次子朱樉册封为秦王，藩封、府治同在一城，因而城池规模宏大坚固，再加上后来明清屡次修葺、增建，至今保存完好......</p>
+          <p class="entercon">点击更多></p>
           <image :src="imgurl" alt="" />
         </div>
         <div class="list-box" v-show="currentIndex == 2">
@@ -61,7 +61,7 @@
               </div>
               <!-- 播放次数和时间 -->
               <div class="performanceInfoBottom">
-                <div><span class="icon-video"></span>{{item.count}}</div>
+                <div><img class="voiimg" src="../../../static/images/voice.png">{{item.count}}</div>
                 <div style="margin-left:20rpx"><span class="icon-time"></span>{{item.time}}</div>
               </div>
             </div>
@@ -76,7 +76,7 @@
 export default {
   data () {
     return {
-      currentIndex: '2',
+      currentIndex: '1',
       performance: [
         {
           name: '《梦长安》王洛',
@@ -85,64 +85,46 @@ export default {
           time: '34:36'
         },
         {
+          name: '《西安钟楼》王洛',
+          year: '3年前',
+          count: '2303万',
+          time: '21:53'
+        },
+        {
+          name: '《潼关古城》王洛',
+          year: '1个月前',
+          count: '876.5万',
+          time: '14:47'
+        },
+        {
           name: '《梦长安》王洛',
-          year: '2年前',
-          count: '5601.9万',
-          time: '34:36'
+          year: '1年前',
+          count: '601.6万',
+          time: '37:38'
+        },
+        {
+          name: '《西安钟楼》王洛',
+          year: '3年前',
+          count: '456.2万',
+          time: '28:51'
+        },
+        {
+          name: '《潼关古城》王洛',
+          year: '2个月前',
+          count: '301.7万',
+          time: '24:47'
         },
         {
           name: '《梦长安》王洛',
           year: '2年前',
-          count: '5601.9万',
-          time: '34:36'
+          count: '287.6万',
+          time: '64:33'
         },
         {
-          name: '《梦长安》王洛',
-          year: '2年前',
-          count: '5601.9万',
-          time: '34:36'
-        },
-        {
-          name: '《梦长安》王洛',
-          year: '2年前',
-          count: '5601.9万',
-          time: '34:36'
-        },
-        {
-          name: '《梦长安》王洛',
-          year: '2年前',
-          count: '5601.9万',
-          time: '34:36'
-        },
-        {
-          name: '《梦长安》王洛',
-          year: '2年前',
-          count: '5601.9万',
-          time: '34:36'
-        },
-        {
-          name: '《梦长安》王洛',
-          year: '2年前',
-          count: '5601.9万',
-          time: '34:36'
-        },
-        {
-          name: '《梦长安》王洛',
-          year: '2年前',
-          count: '5601.9万',
-          time: '34:36'
-        },
-        {
-          name: '《梦长安》王洛',
-          year: '2年前',
-          count: '5601.9万',
-          time: '34:36'
-        },
-        {
-          name: '《梦长安》王洛',
-          year: '2年前',
-          count: '5601.9万',
-          time: '34:36'
+          name: '《西安钟楼》王洛',
+          year: '3年前',
+          count: '101.3万',
+          time: '21:57'
         }
       ],
       performanceInfo: [
@@ -245,7 +227,7 @@ export default {
 
 .themeauthor {
   display: flex;
-  font-size: 26rpx;
+  font-size: 30rpx;
   color: #fff;
   margin: 10rpx 0;
   .nickname{
@@ -404,6 +386,15 @@ export default {
   color: #aaa;
   font-size: 25rpx;
   margin-top: 20rpx;
+  vertical-align: middle;
+  .voiimg {
+    width: 30rpx;
+    height: 26rpx;
+    margin-right: 10rpx;
+    margin-left: 10rpx;
+    margin-top: -6rpx;
+    vertical-align: middle;
+  }
 }
 .Performance .active{
   position: relative;
@@ -421,6 +412,13 @@ export default {
 .detail-box{
   padding: 36rpx;
   font-size: 32rpx;
+  .entercon{
+    font-size: 28rpx;
+    text-align: right;
+    padding-right: 30rpx;
+    padding-bottom: 30rpx;
+    color: #333;
+  }
   image{
     max-width: 100%;
     margin: 10rpx 0;
