@@ -60,6 +60,31 @@
         <span>收藏</span>
       </div>
     </div>
+    <scroll-view class="anchor-list" enable-flex="true" scroll-x="true" bindscroll="scroll" style="width: 100%">
+      <div class="list">
+          <div class="scroll-view-item">
+            <img src="/static/images/index_icon4.png" alt="">
+          </div>
+          <div class="scroll-view-item">
+            <img src="/static/images/vip.png" alt="">
+          </div>
+          <div class="scroll-view-item">
+            <img src="/static/images/logo.png" alt="">
+          </div>
+          <div class="scroll-view-item">
+            <img src="/static/images/vip.png" alt="">
+          </div>
+          <div class="scroll-view-item">
+            <img src="/static/images/index_icon4.png" alt="">
+          </div>
+          <!-- <div class="scroll-view-item">
+            <img src="/static/images/index_icon4.png" alt="">
+          </div>
+          <div class="scroll-view-item">
+            <img src="/static/images/index_icon4.png" alt="">
+          </div> -->
+      </div>
+    </scroll-view>
     <div class="introcon">
       <p class="intro-tit">主播 王洛 梦回长安精选</p>
       <p class="intro-con">西安城墙是中国现存规模最大、保存最完整的古代城垣。现存城墙为明代建筑，全长13.7千米，始建于明太祖洪武三年（1370年），洪武十一年（1378年）竣工，是在明太祖“高筑墙、广积粮、缓称王”的政策指导下，在隋、唐皇城的基础上建成的，当时是西安的府城。</p>
@@ -332,7 +357,7 @@ export default {
     }
   }
   .collection-box{
-    margin: 12rpx 0;
+    margin-top: 12rpx;
     padding: 0 20rpx;
     height: 160rpx;
     background: #fff;
@@ -365,6 +390,30 @@ export default {
       text-align: center;
       background: #ffece8;
       border-radius: 30rpx;
+    }
+  }
+  .anchor-list {
+    background-color: #fff;
+    .list {
+      width: 100%;
+      height: 120rpx;
+      display: flex;
+      justify-content: space-between;
+      // white-space: nowrap;
+      padding-top: 20rpx;
+      margin-bottom: 12rpx;
+    }
+    .scroll-view-item {
+      width: 20%;
+      height: 120rpx;
+      display: flex;
+      justify-content: center;
+      flex-shrink: 0;
+      img {
+        width: 100rpx;
+        height: 100rpx;
+        border-radius: 50%;
+      }
     }
   }
   .introcon{
