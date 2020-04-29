@@ -175,7 +175,7 @@ export default {
       // var url = e.currentTarget.dataset.coverimg
       // var title = e.currentTarget.dataset.title
       wx.navigateTo({
-        url: '/pages/detail/main'
+        url: '/pages/indetail/main'
       })
     },
     // 跳转商品详情页面

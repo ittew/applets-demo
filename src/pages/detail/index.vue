@@ -76,7 +76,7 @@
 export default {
   data () {
     return {
-      currentIndex: '1',
+      currentIndex: '2',
       performance: [
         {
           name: '《梦长安》王洛',
