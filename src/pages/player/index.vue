@@ -60,37 +60,43 @@
         <span>收藏</span>
       </div>
     </div>
-    <scroll-view class="anchor-list" enable-flex="true" scroll-x="true" bindscroll="scroll" style="width: 100%">
-      <div class="list">
-          <div class="scroll-view-item">
-            <img src="/static/images/index_icon4.png" alt="">
-          </div>
-          <div class="scroll-view-item">
-            <img src="/static/images/vip.png" alt="">
-          </div>
-          <div class="scroll-view-item">
-            <img src="/static/images/logo.png" alt="">
-          </div>
-          <div class="scroll-view-item">
-            <img src="/static/images/vip.png" alt="">
-          </div>
-          <div class="scroll-view-item">
-            <img src="/static/images/index_icon4.png" alt="">
-          </div>
-          <div class="scroll-view-item">
-            <img src="/static/images/logo.png" alt="">
-          </div>
-          <div class="scroll-view-item">
-            <img src="/static/images/vip.png" alt="">
-          </div>
-          <div class="scroll-view-item">
-            <img src="/static/images/index_icon4.png" alt="">
-          </div>
-          <div class="leftgu">
-            <img src="/static/images/right.png" alt="">
-          </div>
+    <div class="scroll-title">其他主播</div>
+    <div class="scroll-content">
+      <div class="leftgu">
+        <img src="/static/images/left.png" alt="">
       </div>
-    </scroll-view>
+      <scroll-view class="anchor-list" enable-flex="true" scroll-x="true" bindscroll="scroll" style="width: 100%">
+        <div class="list">
+            <div class="scroll-view-item">
+              <img src="/static/images/index_icon4.png" alt="">
+            </div>
+            <div class="scroll-view-item">
+              <img src="/static/images/vip.png" alt="">
+            </div>
+            <div class="scroll-view-item">
+              <img src="/static/images/logo.png" alt="">
+            </div>
+            <div class="scroll-view-item">
+              <img src="/static/images/vip.png" alt="">
+            </div>
+            <div class="scroll-view-item">
+              <img src="/static/images/index_icon4.png" alt="">
+            </div>
+            <div class="scroll-view-item">
+              <img src="/static/images/logo.png" alt="">
+            </div>
+            <div class="scroll-view-item">
+              <img src="/static/images/vip.png" alt="">
+            </div>
+            <div class="scroll-view-item">
+              <img src="/static/images/index_icon4.png" alt="">
+            </div>
+        </div>
+      </scroll-view>
+       <div class="leftgu">
+          <img src="/static/images/right.png" alt="">
+        </div>
+    </div>
     <div class="introcon">
       <p class="intro-tit">主播 王洛 梦回长安精选</p>
       <p class="intro-con">西安城墙是中国现存规模最大、保存最完整的古代城垣。现存城墙为明代建筑，全长13.7千米，始建于明太祖洪武三年（1370年），洪武十一年（1378年）竣工，是在明太祖“高筑墙、广积粮、缓称王”的政策指导下，在隋、唐皇城的基础上建成的，当时是西安的府城。</p>
@@ -398,36 +404,35 @@ export default {
       border-radius: 30rpx;
     }
   }
-  .anchor-list {
+  .scroll-title {
     background-color: #fff;
+    width: 100%;
+    padding:10rpx 0 0 20rpx;
+    font-size: 35rpx;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333;
+  }
+  .scroll-content {
+    display: flex;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    margin-bottom: 12rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+  .anchor-list {
+    width: 88%!important;
     .list {
-      width: 98%;
+      width: 100%;
       height: 120rpx;
       display: flex;
       justify-content: space-between;
-      // white-space: nowrap;
-      padding-top: 20rpx;
-      margin-bottom: 12rpx;
-      position:relative;
-    }
-    .leftgu {
-      position: fixed;
-      width: 30rpx;
-      background-color: #fff;
-      height: 120rpx;
-      top: 980rpx;
-      right: 0;
-      padding-top:35rpx;
-      box-sizing: border-box;
-      img{
-        width: 30rpx;
-        height: 40rpx;
-      }
     }
     .scroll-view-item {
       width: 20%;
       height: 120rpx;
       display: flex;
+      align-items: center;
       justify-content: center;
       flex-shrink: 0;
       img {
@@ -435,6 +440,19 @@ export default {
         height: 100rpx;
         border-radius: 50%;
       }
+    }
+  }
+  .leftgu {
+    width: 6%;
+    background-color: #fff;
+    height: 120rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    img{
+      width: 30rpx;
+      height: 40rpx;
     }
   }
   .introcon{
@@ -518,5 +536,10 @@ export default {
       border-bottom: 1px solid #dddddd;
     }
   }
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
 }
 </style>
