@@ -77,12 +77,18 @@
           <div class="scroll-view-item">
             <img src="/static/images/index_icon4.png" alt="">
           </div>
-          <!-- <div class="scroll-view-item">
-            <img src="/static/images/index_icon4.png" alt="">
+          <div class="scroll-view-item">
+            <img src="/static/images/logo.png" alt="">
+          </div>
+          <div class="scroll-view-item">
+            <img src="/static/images/vip.png" alt="">
           </div>
           <div class="scroll-view-item">
             <img src="/static/images/index_icon4.png" alt="">
-          </div> -->
+          </div>
+          <div class="leftgu">
+            <img src="/static/images/right.png" alt="">
+          </div>
       </div>
     </scroll-view>
     <div class="introcon">
@@ -395,13 +401,28 @@ export default {
   .anchor-list {
     background-color: #fff;
     .list {
-      width: 100%;
+      width: 98%;
       height: 120rpx;
       display: flex;
       justify-content: space-between;
       // white-space: nowrap;
       padding-top: 20rpx;
       margin-bottom: 12rpx;
+      position:relative;
+    }
+    .leftgu {
+      position: fixed;
+      width: 30rpx;
+      background-color: #fff;
+      height: 120rpx;
+      top: 980rpx;
+      right: 0;
+      padding-top:35rpx;
+      box-sizing: border-box;
+      img{
+        width: 30rpx;
+        height: 40rpx;
+      }
     }
     .scroll-view-item {
       width: 20%;
