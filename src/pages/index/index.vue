@@ -23,10 +23,10 @@
         </div>
       </div>
     </div>
-    <!-- 猜你喜欢 -->
+    <!-- 热门推荐 -->
     <div class="like">
       <div class="barTitle padbot20">
-        <div class="Title-left">猜你喜欢</div>
+        <div class="Title-left">热门推荐</div>
         <div class="Title-right" @tap="gotoList(1)">查看全部 ></div>
       </div>
       <div class="likeItemBox">
@@ -72,12 +72,12 @@ export default {
   data () {
     return {
       imgList: [
-        '/static/images/index/ad1.jpg',
-        '/static/images/index/ad2.jpg',
-        '/static/images/index/ad3.jpg',
-        '/static/images/index/ad4.jpg',
-        '/static/images/index/ad5.jpg',
-        '/static/images/index/ad6.jpg'
+        'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=332952865,2203891885&fm=26&gp=0.jpg',
+        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588173846515&di=704be20fbdd0aae1e609320520b20b5e&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F9vo3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F91ef76c6a7efce1b34532a8aa251f3deb48f6572.jpg',
+        'https://bkimg.cdn.bcebos.com/pic/f9198618367adab40afa915684d4b31c8701e4f9?x-bce-process=image/watermark,g_7,image_d2F0ZXIvYmFpa2UyMjA=,xp_5,yp_5',
+        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588173754711&di=28d762e98497e3c1f7907e173e539a46&imgtype=0&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D2552866594%2C2320831312%26fm%3D214%26gp%3D0.jpg',
+        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588173788474&di=24e23d012f76701bdf57c19e246eed29&imgtype=0&src=http%3A%2F%2Fwww.dxxnews.com%2Fuploads%2Fallimg%2F140611%2F1S0123H6-0.jpg',
+        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588173814081&di=8dafa1ea40ad9b6d38b677ceb5e31647&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181120%2F98316bbcc7804e31b45ac41a8b508f7d.jpeg'
       ],
       sights: [
         {
@@ -93,7 +93,7 @@ export default {
       ],
       content: [
         {
-          title: '红色旅游',
+          title: '红色之旅',
           list: [
             {
               'albumCoverUrl290': 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1963510029,3807888424&fm=26&gp=0.jpg',
@@ -111,6 +111,29 @@ export default {
               'albumCoverUrl290': 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=705007648,889284190&fm=15&gp=0.jpg',
               'title': '陕西历史博物馆',
               'trackTitle': '陕西历史博物馆，中国第一座大型现代化国家级博物馆，首批中国“AAAA”级旅游景点，被誉为“古都明珠，华夏宝库”。位于陕西省西安市雁塔区小寨东路91号，大雁塔西北侧。馆藏文物171.795万件',
+              'tracks': 120
+            }
+          ]
+        },
+        {
+          title: '党的声音',
+          list: [
+            {
+              'albumCoverUrl290': 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1201159634,4198433506&fm=26&gp=0.jpg',
+              'title': '巡察组开展座谈活动',
+              'trackTitle': '陕西党委第一巡察组于2019年12月10日在被巡察单位控制技术学院开展个别谈话与座谈活动。个别谈话分两组进行，分别由巡察组杨雪琴组长和胡全裕副组长组织开展。',
+              'tracks': 100
+            },
+            {
+              'albumCoverUrl290': 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3222263570,387870150&fm=11&gp=0.jpg',
+              'title': '“访雨花英烈，忆初心使命”主题党日活动',
+              'trackTitle': '为深入开展“不忘初心 牢记使命”主题教育，进一步坚定理想信念，传承先烈精神，笃行使命担当，12月7日，控制技术学院党总支组织教工党员一行23人，赴南京雨花台开展“访雨花英烈，忆初心使命”主题党日活动。',
+              'tracks': 110
+            },
+            {
+              'albumCoverUrl290': 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1388856401,2817763086&fm=26&gp=0.jpg',
+              'title': '党课宣讲活动',
+              'trackTitle': '第一、二党支部在工业中心409开展“领学党章” 及“深刻领悟成功之道，不忘初心牢记使命”支部书记党课专题宣讲，支部全体党员参加了本次学习。',
               'tracks': 120
             }
           ]
@@ -139,24 +162,24 @@ export default {
           ]
         },
         {
-          title: '党建之声',
+          title: '扶贫先扶智',
           list: [
             {
               'albumCoverUrl290': 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1201159634,4198433506&fm=26&gp=0.jpg',
-              'title': '巡察组开展座谈活动',
-              'trackTitle': '陕西党委第一巡察组于2019年12月10日在被巡察单位控制技术学院开展个别谈话与座谈活动。个别谈话分两组进行，分别由巡察组杨雪琴组长和胡全裕副组长组织开展。',
+              'title': '习近平谈摆脱贫困:扶贫必扶智,治贫先治愚',
+              'trackTitle': '要帮助贫困地区群众提高身体素质、文化素质、就业能力，努力阻止因病致贫、因病返贫，打开孩子们通过学习成长、青壮年通过多渠道就业改变命运的扎实通道，坚决阻止贫困现象代际传递。',
               'tracks': 100
             },
             {
               'albumCoverUrl290': 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3222263570,387870150&fm=11&gp=0.jpg',
-              'title': '“访雨花英烈，忆初心使命”主题党日活动',
-              'trackTitle': '为深入开展“不忘初心 牢记使命”主题教育，进一步坚定理想信念，传承先烈精神，笃行使命担当，12月7日，控制技术学院党总支组织教工党员一行23人，赴南京雨花台开展“访雨花英烈，忆初心使命”主题党日活动。',
+              'title': '扶贫先扶智',
+              'trackTitle': '“贫穷本身并不可怕，可怕的是自己以为命中 注定贫穷或一定老死于贫穷的思想。”如此说来， 在精准扶贫、精准脱贫中，各地应该紧紧抓住科技扶贫这个“牛鼻子”，瞄准贫困乡村实际需求，通 过转化实用技术、扶持支柱产业、建立服务体系、 培养乡土人才等措施，增强贫困地区农民自我积累 和自我发展的能力，加快脱贫致富步伐。',
               'tracks': 110
             },
             {
               'albumCoverUrl290': 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1388856401,2817763086&fm=26&gp=0.jpg',
-              'title': '党课宣讲活动',
-              'trackTitle': '第一、二党支部在工业中心409开展“领学党章” 及“深刻领悟成功之道，不忘初心牢记使命”支部书记党课专题宣讲，支部全体党员参加了本次学习。',
+              'title': '精准扶贫综述：扶贫先扶智 扶智先强教',
+              'trackTitle': '“扶什么”“怎么扶”“谁来扶”？“十二五”以来，我省建立了各学段“全覆盖、无缝衔接”的家庭经济困难学生精准资助体系，形成了独具陕西特色的学生资助工作模式。从学前教育到研究生，资助4279.87万人次，资助金额309.19亿元，实现了贫困家庭学生资助全覆盖，并形成了多个全国“第一”。',
               'tracks': 120
             }
           ]
