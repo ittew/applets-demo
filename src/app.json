@@ -10,7 +10,8 @@
     "pages/classification/main",
     "pages/collection/main",
     "pages/user/main",
-    "pages/list/main"
+    "pages/list/main",
+    "pages/enjoyListening/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,10 +38,10 @@
         "selectedIconPath": "/static/tabs/fen-selectIcon.png"
       },
       {
-        "pagePath": "pages/collection/main",
-        "text": "收藏",
-        "iconPath": "/static/tabs/collection-icon.png",
-        "selectedIconPath": "/static/tabs/collection-selectIcon.png"
+        "pagePath": "pages/enjoyListening/main",
+        "text": "享听",
+        "iconPath": "/static/tabs/music-icon.png",
+        "selectedIconPath": "/static/tabs/music-selectIcon.png"
       },
       {
         "pagePath": "pages/user/main",
