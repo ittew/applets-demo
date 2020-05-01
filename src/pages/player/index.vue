@@ -238,7 +238,7 @@ export default {
     }
   },
 
-  created () {
+  beforeMount () {
     this.myAudio = wx.createInnerAudioContext()
     this.myAudio.src = 'http://www.029-smart.com/images/demo/004fq.mp3'
     // http://mp3.9ku.com/hot/2004/07-13/6705.mp3
