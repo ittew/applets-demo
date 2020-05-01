@@ -240,7 +240,7 @@ export default {
 
   created () {
     this.myAudio = wx.createInnerAudioContext()
-    this.myAudio.src = 'http://mp3.9ku.com/mp3/3/2943.mp3'
+    this.myAudio.src = 'http://www.029-smart.com/images/demo/004fq.mp3'
     // http://mp3.9ku.com/hot/2004/07-13/6705.mp3
     // http://mp3.9ku.com/hot/2005/08-11/68772.mp3
     // http://mp3.9ku.com/mp3/1/234.mp3
@@ -254,6 +254,7 @@ export default {
       setTimeout(() => {
         this.myAudioDuration = this.format(this.myAudio.duration) // 总时长
         this.myAudioCurrent = this.format(this.myAudio.currentTime) // 当前已播放时间
+        this.playHandle()
       }, 1000)
     })
 
