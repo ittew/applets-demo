@@ -24,6 +24,10 @@
           <text style="margin-left:20rpx">我的优惠券</text>
           <text class="icon-right text-gray">></text>
         </div>
+        <div @tap="gotoCollect" class="choiceItem">
+          <text style="margin-left:20rpx">我的收藏</text>
+          <text class="icon-right text-gray">></text>
+        </div>
         <div class="choiceItem">
           <text style="margin-left:20rpx">意见反馈</text>
           <text class="icon-right text-gray">></text>
@@ -59,6 +63,12 @@ export default {
     })
   },
   methods: {
+    // 跳转收藏页面
+    gotoCollect () {
+      wx.navigateTo({
+        url: '/pages/collection/main'
+      })
+    },
     handleGetUserInfo (res) {
       console.log(res)
       if (res.mp.detail.userInfo) {

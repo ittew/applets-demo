@@ -30,9 +30,10 @@
         <div class="Title-right" @tap="gotoList(1)">查看全部 ></div>
       </div>
       <div class="likeItemBox">
-        <div class="likeItem" @tap="gotoDetails"  v-for="(v,i) in sights" :key="i">
+        <div class="likeItem" @tap="gotoPlay" v-for="(v,i) in sights" :key="i">
           <div class="likeimg">
             <img class="likeItemIcon" :src="v.coverMiddle">
+            <img class="playIcon" src="../../../static/images/play.png">
             <div class="likecover">
               <!-- text用来显示icon  暂无 -->
               <span class=""></span> 4.6万/人次
@@ -50,14 +51,21 @@
       </div>
       <div v-for="(item,index) in v.list" :key="index">
         <div class="content" @tap="gotoDetails">
-          <image class="contentImg" :src="item.albumCoverUrl290" mode="widthFix"></image>
+          <image class="contentImg" :src="item.albumCoverUrl290"></image>
           <div class="content-right">
             <div class="content-title">
               <div class="titleText">{{item.title}}</div>
               <div class="introduction">{{item.trackTitle}}</div>
             </div>
             <div class="count">
-              <div class="jicount"><img class="peoimg" src="../../../static/images/voice.png">{{item.tracks}}万 <img class="jiimg" src="../../../static/images/count.png"><span>1523集</span></div>
+              <div class="jicount">
+                <img class="peoimg" src="../../../static/images/voice.png">
+                <span>{{item.tracks}}万</span>
+                <img class="jiimg" src="../../../static/images/count.png">
+                <span>1523集</span>
+                <img @tap="gotoPlay" class="playimg" src="../../../static/images/index/plaa.png">
+                <span @tap="gotoPlay">点击播放</span>
+              </div>
             </div>
           </div>
         </div>
@@ -192,6 +200,12 @@ export default {
     // 轮播图改变事件
     swiperChange (e) {
       this.swiperCurrent = e.mp.detail.current
+    },
+    // 跳到播放页面
+    gotoPlay () {
+      wx.navigateTo({
+        url: '/pages/player/main?id=1'
+      })
     },
     // 跳转商品详情页面
     gotoDetails () {
@@ -340,6 +354,14 @@ export default {
     height: 100%;
     border-radius: 15rpx;
   }
+  .playIcon{
+    width: 70rpx;
+    height: 65rpx;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
   .likeText{
     font-size: 28rpx;
     color: #333;
@@ -394,7 +416,7 @@ export default {
   }
   .contentImg{
     width: 232rpx;
-    height: 210rpx;
+    height: 186rpx;
     border-radius: 15rpx;
   }
   .content-right{
@@ -406,7 +428,6 @@ export default {
   }
   .content-title{
     width: 100%;
-    height: 138rpx;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -446,6 +467,16 @@ export default {
     font-size: 25rpx;
     color: #cdcdcd;
     vertical-align: middle;
+    image{
+      margin-right: 10rpx;
+    }
+    .playimg{
+      width: 30rpx;
+      height: 26rpx;
+      margin-left: 25rpx;
+      margin-top: 6rpx;
+      vertical-align: top;
+    }
     .peoimg{
       width: 30rpx;
       height: 26rpx;
@@ -453,8 +484,8 @@ export default {
       vertical-align: top;
     }
     .jiimg{
-      width: 30rpx;
-      height: 25rpx;
+      width: 28rpx;
+      height: 20rpx;
       margin-left: 25rpx;
       vertical-align: middle;
     }
