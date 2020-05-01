@@ -363,11 +363,12 @@ export default {
     transform: translate(-50%,-50%);
   }
   .likeText{
+    width: 200rpx;
     font-size: 28rpx;
     color: #333;
     margin-top: 10rpx;
     display: -webkit-box;
-    -webkit-line-clamp: 2;/*行数n*/
+    -webkit-line-clamp: 1;/*行数n*/
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
