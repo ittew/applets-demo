@@ -236,9 +236,10 @@ export default {
     // 播放
     playHandle () {
       // 考虑到进度条被拖动，不一定从00:00:00开始 当前开始播放的时间
-      this.audioDom.startTime = this.myAudioCurrent
+      this.audioDom.startTime = this.audioDom.currentTime
       // 播放
       this.audioDom.title = this.playing.title // 不加会报错
+      this.audioDom.src = this.playing.url // 不加会报错
       this.audioDom.play()
       // this.isPlay = true
       this.updateAudioStatus(true)
@@ -270,10 +271,12 @@ export default {
     },
     initAudio () {
       this.updateAudioStatus(true)
+      console.log(this.audioDom, '--------------------')
       console.log(this.audioDom.paused, '--------------------')
       console.log(this.audioStatus, '--------------------')
       this.audioDom.title = this.playing.title
       this.audioDom.src = this.playing.url
+      this.audioDom.startTime = this.audioDom.currentTime
       this.audioDom.coverImgUrl = this.playing.cover
       this.audioDom.singer = this.playing.singer
       if (this.audioDom.paused && !this.audioStatus) {
