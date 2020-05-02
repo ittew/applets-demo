@@ -191,19 +191,19 @@ export default {
         'id': 1,
         'intro': '西安城墙',
         'coverMiddle': 'https://pic.qyer.com/album/user/3604/0/Qk9VRhoHYkk/index/180180',
-        'audioUrl': 'http://mp3.9ku.com/mp3/3/2943.mp3',
+        'audioUrl': 'http://www.029-smart.com/images/demo/004fq.mp3',
         'singer': '张三'
       }, {
         'id': 2,
         'intro': '陕西历史博物馆',
         'coverMiddle': 'https://pic.qyer.com/album/user/1965/51/QEBTRx8GYkA/index/180180',
-        'audioUrl': 'http://mp3.9ku.com/hot/2004/07-13/6705.mp3',
+        'audioUrl': 'http://www.029-smart.com/images/demo/003hylq.mp3',
         'singer': '李四'
       }, {
         'id': 3,
         'intro': '大唐芙蓉园',
         'coverMiddle': 'https://pic.qyer.com/album/user/3710/48/Qk5UQh4PZ0E/index/180180',
-        'audioUrl': 'http://mp3.9ku.com/hot/2005/08-11/68772.mp3',
+        'audioUrl': 'http://www.029-smart.com/images/demo/001cq.mp3',
         'singer': '王五'
       }],
       audioImgUrl: ''
