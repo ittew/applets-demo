@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="slider-box">
-        <slider @touchstart="startHandle" @change="sliderChange" :value="myAudioPos" block-size='10' block-color='#e97b6a' backgroundColor="#d8d8d8" activeColor="#e97b6a"
+        <slider @touchstart="startHandle" @change="sliderChange"  @changing="changeHandle" :value="myAudioPos" block-size='10' block-color='#e97b6a' backgroundColor="#d8d8d8" activeColor="#e97b6a"
         />
         <div class="time">
           <div class="current-time">{{myAudioCurrent}}</div>
@@ -209,11 +209,12 @@ export default {
       audioImgUrl: ''
     }
   },
-  computed: {
-    ...mapState(['audioDom', 'playing', 'audioStatus'])
-  },
+
   methods: {
     ...mapActions(['setPlayer', 'updateAudioStatus']),
+    changeHandle () {
+      return false
+    },
     startHandle () {
       console.log('startHandle')
       // this.audioDom.offTimeUpdate() // 取消事件 防止和slider滑动位置出现跳动问题
@@ -238,7 +239,7 @@ export default {
       // 考虑到进度条被拖动，不一定从00:00:00开始 当前开始播放的时间
       this.audioDom.startTime = this.myAudioCurrent
       // 播放
-      this.audioDom.title = this.playing.title // 不加会报错
+      this.audioDom.title = '阿三打撒'
       this.audioDom.play()
       // this.isPlay = true
       this.updateAudioStatus(true)
@@ -304,6 +305,9 @@ export default {
         this.audioDom.pause()
       })
     }
+  },
+  computed: {
+    ...mapState(['audioDom', 'playing', 'audioStatus'])
   },
 
   beforeMount () {

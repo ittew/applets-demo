@@ -71,10 +71,14 @@
         </div>
       </div>
     </div>
+    <!-- 播放条  -->
+    <PlayerBar v-if="playing.id"></PlayerBar>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import PlayerBar from '@/components/playerBar/index'
 export default {
   data () {
     return {
@@ -142,8 +146,12 @@ export default {
       isCollection: false
     }
   },
-
-  components: {},
+  computed: {
+    ...mapState(['playing'])
+  },
+  components: {
+    PlayerBar
+  },
 
   methods: {
     collectionHandle () {

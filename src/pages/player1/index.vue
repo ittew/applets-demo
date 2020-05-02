@@ -3,8 +3,7 @@
     <div class="header">
       <div class="title">第一集：梦回长安</div>
       <div class="views-box">
-        <!-- <img class="view-img" src="/static/images/index/ad2.jpg" alt=""> -->
-        <img class="view-img" :src="audioImgUrl" alt="">
+        <img class="view-img" src="/static/images/index/ad2.jpg" alt="">
         <div class="view-con">
           <div class="views views1">
             <img class="view-ji" src="/static/player/voice.png" alt="">
@@ -28,8 +27,8 @@
     <div class="player-box">
       <div class="controls">
         <img class="prev" src="/static/player/prev.png" alt="">
-        <img class="play" @tap="playHandle" v-show="!audioStatus" src="/static/player/pause.png" alt="">
-        <img class="pause" @tap="pauseHandle" v-show="audioStatus" src="/static/player/play.png" alt="">
+        <img class="play" @tap="playHandle" v-show="!isPlay" src="/static/player/pause.png" alt="">
+        <img class="pause" @tap="pauseHandle" v-show="isPlay" src="/static/player/play.png" alt="">
         <img class="next" src="/static/player/next.png" alt="">
       </div>
       <div class="like-box">
@@ -51,8 +50,7 @@
       </div>
     </div>
     <div class="collection-box">
-      <!-- <img src="/static/images/index/ad2.jpg" alt=""> -->
-      <img class="view-img" :src="audioImgUrl" alt="">
+      <img src="/static/images/index/ad2.jpg" alt="">
       <div class="title-number">
         <div class="title">寻迹古长安——古都城墙</div>
         <div class="number">7.5万人收藏</div>
@@ -178,156 +176,93 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
 export default {
   data () {
     return {
-      // isPlay: this.audioStatus, // 是否播放
+      isPlay: false, // 是否播放
       myAudioCurrent: '0', // 音频当前已播放时间
       myAudioDuration: '0', // 音频总时长
       myAudio: '', // 音频实例
-      myAudioPos: 0, // 当前滑块的位置
-      audioList: [{
-        'id': 1,
-        'intro': '西安城墙',
-        'coverMiddle': 'https://pic.qyer.com/album/user/3604/0/Qk9VRhoHYkk/index/180180',
-        'audioUrl': 'http://mp3.9ku.com/mp3/3/2943.mp3',
-        'singer': '张三'
-      }, {
-        'id': 2,
-        'intro': '陕西历史博物馆',
-        'coverMiddle': 'https://pic.qyer.com/album/user/1965/51/QEBTRx8GYkA/index/180180',
-        'audioUrl': 'http://mp3.9ku.com/hot/2004/07-13/6705.mp3',
-        'singer': '李四'
-      }, {
-        'id': 3,
-        'intro': '大唐芙蓉园',
-        'coverMiddle': 'https://pic.qyer.com/album/user/3710/48/Qk5UQh4PZ0E/index/180180',
-        'audioUrl': 'http://mp3.9ku.com/hot/2005/08-11/68772.mp3',
-        'singer': '王五'
-      }],
-      audioImgUrl: ''
+      myAudioPos: 0 // 当前滑块的位置
     }
   },
-  computed: {
-    ...mapState(['audioDom', 'playing', 'audioStatus'])
+
+  components: {
   },
+
   methods: {
-    ...mapActions(['setPlayer', 'updateAudioStatus']),
     startHandle () {
       console.log('startHandle')
-      // this.audioDom.offTimeUpdate() // 取消事件 防止和slider滑动位置出现跳动问题
+      this.myAudio.offTimeUpdate() // 取消事件 防止和slider滑动位置出现跳动问题
     },
     // 滑块滑动完成事件
     sliderChange (e) {
       // 当前slider滑动的距离
       const position = e.target.value
       // 根据滑动位置计算出当前所对应的时间
-      let currentTime = position / 100 * this.audioDom.duration
+      let currentTime = position / 100 * this.myAudio.duration
       // 跳转到指定位置 单位s秒
       console.log(currentTime, 'currentTime')
-      this.audioDom.seek(currentTime)
-      console.log(this.audioDom.currentTime, 'this.myAudio.currentTime')
-      setTimeout(() => {
-        console.log(this.audioDom.currentTime, 'this.myAudio.currentTime')
-      }, 100)
+      this.myAudio.seek(currentTime)
+      console.log(this.myAudio.currentTime, 'this.myAudio.currentTime')
       this.updateTime()
     },
     // 播放
     playHandle () {
       // 考虑到进度条被拖动，不一定从00:00:00开始 当前开始播放的时间
-      this.audioDom.startTime = this.myAudioCurrent
+      this.myAudio.startTime = this.myAudioCurrent
       // 播放
-      this.audioDom.title = this.playing.title // 不加会报错
-      this.audioDom.play()
-      // this.isPlay = true
-      this.updateAudioStatus(true)
+      this.myAudio.play()
+      this.isPlay = true
       this.updateTime()
     },
     updateTime () {
       // 进度条变化
-      this.audioDom.onTimeUpdate(this.setAudioPos)
-    },
-    setAudioPos () {
-      // 更新滑块位置
-      setTimeout(() => {
-        this.myAudioPos = this.audioDom.currentTime / this.audioDom.duration * 100
-      }, 10)
-      // 更新当前已播放时间
-      this.myAudioCurrent = this.format(this.audioDom.currentTime)
+      this.myAudio.onTimeUpdate(() => {
+        // 更新滑块位置
+        this.myAudioPos = this.myAudio.currentTime / this.myAudio.duration * 100
+        // 更新当前已播放时间
+        this.myAudioCurrent = this.format(this.myAudio.currentTime)
+      })
     },
     // 暂停
     pauseHandle () {
-      this.audioDom.pause()
-      // this.isPlay = false
-      this.updateAudioStatus(false)
+      this.myAudio.pause()
+      this.isPlay = false
     },
     // 时间格式化
     format (t) {
       let time = Math.floor(t / 60) >= 10 ? Math.floor(t / 60) : '0' + Math.floor(t / 60)
       t = time + ':' + ((t % 60) / 100).toFixed(2).slice(-2)
       return t
-    },
-    initAudio () {
-      this.updateAudioStatus(true)
-      console.log(this.audioDom.paused, '--------------------')
-      console.log(this.audioStatus, '--------------------')
-      this.audioDom.title = this.playing.title
-      this.audioDom.src = this.playing.url
-      this.audioDom.coverImgUrl = this.playing.cover
-      this.audioDom.singer = this.playing.singer
-      if (this.audioDom.paused && !this.audioStatus) {
-        this.audioDom.pause()
-      }
-
-      // 在onCanplay里获取并设置音频时长和播放进度
-      this.updateTime()
-      this.audioDom.onCanplay(() => {
-        console.log(this.audioDom)
-        // eslint-disable-next-line
-        setTimeout(() => {
-          this.myAudioDuration = this.format(this.audioDom.duration) // 总时长
-          this.myAudioCurrent = this.format(this.audioDom.currentTime) // 当前已播放时间
-        }, 100)
-      })
-      setTimeout(() => {
-        wx.hideLoading()
-      }, 1000)
-      // 播放完成处理，按钮变一下
-      this.audioDom.onEnded((res) => {
-        this.myAudioPos = 0
-        this.myAudioCurrent = '00:00'
-        this.updateAudioStatus(false)
-      })
-      // 播放完成处理，按钮变一下
-      this.audioDom.onPause(() => {
-        this.audioDom.pause()
-      })
     }
   },
 
-  beforeMount () {
-    wx.showLoading({ title: '加载中' })
-    console.log(this.playing)
-    console.log(this.$mp.query.id)
-    let audioId = this.$mp.query.id ? this.$mp.query.id : 1
-    let player = {}
-    this.audioList.map(item => {
+  created () {
+    this.myAudio = wx.createInnerAudioContext()
+    this.myAudio.src = 'http://mp3.9ku.com/mp3/3/2943.mp3'
+    // http://mp3.9ku.com/hot/2004/07-13/6705.mp3
+    // http://mp3.9ku.com/hot/2005/08-11/68772.mp3
+    // http://mp3.9ku.com/mp3/1/234.mp3
+    // http://mp3.9ku.com/mp3/1/236.mp3
+    this.myAudio.title = 'Cannon'
+    console.log(this.myAudio)
+    // 在onCanplay里获取并设置音频时长和播放进度
+    this.myAudio.onCanplay(() => {
       // eslint-disable-next-line
-      if (item.id == audioId) {
-        player = item
-      }
+      this.myAudio.duration // 必须写，不然获取不到。。。
+      setTimeout(() => {
+        this.myAudioDuration = this.format(this.myAudio.duration) // 总时长
+        this.myAudioCurrent = this.format(this.myAudio.currentTime) // 当前已播放时间
+      }, 1000)
     })
-    console.log(player)
-    this.audioImgUrl = player.coverMiddle
-    this.setPlayer({
-      id: player.id,
-      title: player.intro,
-      cover: player.coverMiddle,
-      url: player.audioUrl,
-      singer: player.singer
+
+    // 播放完成处理，按钮变一下
+    this.myAudio.onEnded((res) => {
+      this.myAudioPos = 0
+      this.myAudioCurrent = '00:00'
+      this.isPlay = false
     })
-    this.initAudio()
   }
 }
 </script>

@@ -47,4 +47,26 @@ export default {
   -webkit-transition: width 2s;
   -o-transition: width 2s;
 }
+image, img{
+  vertical-align: middle;
+}
+/***超出一行用...省略***/
+.ellipsis {
+  overflow: hidden!important;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+/***超出俩行用...省略***/
+.ellipsis-two {
+  overflow: hidden!important;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+view,scroll-view,swiper,swiper-item,movable-area,movable-view,cover-view,cover-image,icon,text,rich-text,progress,button,checkbox-group,checkbox,form,input,label,picker,picker-view,radio-group,radio,slider,switch,textarea,navigator,functional-page-navigator,image,video,camera,live-player,live-pusher,map,canvas,open-data,web-view,ad{
+  box-sizing: border-box;
+}
 </style>

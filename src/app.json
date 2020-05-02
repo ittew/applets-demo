@@ -13,6 +13,9 @@
     "pages/list/main",
     "pages/enjoyListening/main"
   ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

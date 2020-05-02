@@ -30,7 +30,7 @@
         <div class="Title-right" @tap="gotoList(1)">查看全部 ></div>
       </div>
       <div class="likeItemBox">
-        <div class="likeItem" @tap="gotoPlay" v-for="(v,i) in sights" :key="i">
+        <div class="likeItem" @tap="gotoPlay(v.id)" v-for="(v,i) in sights" :key="i">
           <div class="likeimg">
             <img class="likeItemIcon" :src="v.coverMiddle">
             <img class="playIcon" src="../../../static/images/play.png">
@@ -51,7 +51,7 @@
       </div>
       <div v-for="(item,index) in v.list" :key="index">
         <div class="content" @tap="gotoDetails">
-          <image class="contentImg" :src="item.albumCoverUrl290"></image>
+          <image class="contentImg" :src="item.albumCoverUrl290" />
           <div class="content-right">
             <div class="content-title">
               <div class="titleText">{{item.title}}</div>
@@ -71,12 +71,22 @@
         </div>
       </div>
     </div>
+
+    <!-- 播放条  -->
+    <PlayerBar v-if="playing.id"></PlayerBar>
   </div>
 </template>
 
 <script>
-
+import { mapState } from 'vuex'
+import PlayerBar from '@/components/playerBar/index'
 export default {
+  computed: {
+    ...mapState(['playing'])
+  },
+  components: {
+    PlayerBar
+  },
   data () {
     return {
       imgList: [
@@ -89,12 +99,15 @@ export default {
       ],
       sights: [
         {
+          'id': 1,
           'intro': '西安城墙',
           'coverMiddle': 'https://pic.qyer.com/album/user/3604/0/Qk9VRhoHYkk/index/180180'
         }, {
+          'id': 2,
           'intro': '陕西历史博物馆',
           'coverMiddle': 'https://pic.qyer.com/album/user/1965/51/QEBTRx8GYkA/index/180180'
         }, {
+          'id': 3,
           'intro': '大唐芙蓉园',
           'coverMiddle': 'https://pic.qyer.com/album/user/3710/48/Qk5UQh4PZ0E/index/180180'
         }
@@ -202,9 +215,9 @@ export default {
       this.swiperCurrent = e.mp.detail.current
     },
     // 跳到播放页面
-    gotoPlay () {
+    gotoPlay (id) {
       wx.navigateTo({
-        url: '/pages/player/main?id=1'
+        url: `/pages/player/main?id=${id}`
       })
     },
     // 跳转商品详情页面
