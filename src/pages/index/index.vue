@@ -63,8 +63,8 @@
                 <span>{{item.tracks}}万</span>
                 <img class="jiimg" src="../../../static/images/count.png">
                 <span>1523集</span>
-                <img @tap="gotoPlay" class="playimg" src="../../../static/images/index/plaa.png">
-                <span @tap="gotoPlay">点击播放</span>
+                <img class="playimg" src="../../../static/images/index/plaa.png">
+                <span>点击播放</span>
               </div>
             </div>
           </div>
@@ -90,12 +90,11 @@ export default {
   data () {
     return {
       imgList: [
-        'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=332952865,2203891885&fm=26&gp=0.jpg',
-        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588173846515&di=704be20fbdd0aae1e609320520b20b5e&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F9vo3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F91ef76c6a7efce1b34532a8aa251f3deb48f6572.jpg',
+        '/static/images/index/in1.png',
+        '/static/images/index/in2.jpg',
+        '/static/images/index/in3.jpg',
         'https://bkimg.cdn.bcebos.com/pic/f9198618367adab40afa915684d4b31c8701e4f9?x-bce-process=image/watermark,g_7,image_d2F0ZXIvYmFpa2UyMjA=,xp_5,yp_5',
-        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588173754711&di=28d762e98497e3c1f7907e173e539a46&imgtype=0&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D2552866594%2C2320831312%26fm%3D214%26gp%3D0.jpg',
-        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588173788474&di=24e23d012f76701bdf57c19e246eed29&imgtype=0&src=http%3A%2F%2Fwww.dxxnews.com%2Fuploads%2Fallimg%2F140611%2F1S0123H6-0.jpg',
-        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588173814081&di=8dafa1ea40ad9b6d38b677ceb5e31647&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181120%2F98316bbcc7804e31b45ac41a8b508f7d.jpeg'
+        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588173788474&di=24e23d012f76701bdf57c19e246eed29&imgtype=0&src=http%3A%2F%2Fwww.dxxnews.com%2Fuploads%2Fallimg%2F140611%2F1S0123H6-0.jpg'
       ],
       sights: [
         {
@@ -117,9 +116,9 @@ export default {
           title: '红色之旅',
           list: [
             {
-              'albumCoverUrl290': 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1963510029,3807888424&fm=26&gp=0.jpg',
-              'title': '秦始皇兵马俑',
-              'trackTitle': '兵马俑，亦简称秦兵马俑或秦俑，第一批全国重点文物保护单位，第一批中国世界遗产，位于今陕西省西安市临潼区秦始皇陵以东1.5千米处的兵马俑坑内。',
+              'albumCoverUrl290': 'http://www.yanan.gov.cn/wcm.files/upload/CMSyanan/201710//20171024020414950.jpg',
+              'title': '红色延安革命根据地',
+              'trackTitle': '宝塔山是革命圣地延安的标志和象征，融历史文物和革命遗址为一脉，集人文景观和自然景观为一体。登临其上，圣地景色尽收眼底，高原风光一览无余，使得无数游人无不赞叹',
               'tracks': 100
             },
             {

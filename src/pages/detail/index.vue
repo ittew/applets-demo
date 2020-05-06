@@ -11,7 +11,7 @@
             <div class="themetitle">{{item.title}}</div>
             <div class="themeauthor">
               <img src="/static/images/index_icon4.png" alt="">
-              <span class="nickname">走进主播>>{{item.author}}</span>
+              <span class="nickname">进入个人主播页>>{{item.author}}</span>
             </div>
             <div class="viewinfo">
               <div class="viewinfoleft">{{item.num1}}人收藏</div>
@@ -85,49 +85,49 @@ export default {
       currentIndex: '2',
       performance: [
         {
-          name: '《梦长安》王洛',
+          name: '《抗小旧址》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
         },
         {
-          name: '《西安钟楼》王洛',
+          name: '《凤凰山革命旧址》王洛',
           year: '3年前',
           count: '2303万',
           time: '21:53'
         },
         {
-          name: '《潼关古城》王洛',
+          name: '《宝塔山》王洛',
           year: '1个月前',
           count: '876.5万',
           time: '14:47'
         },
         {
-          name: '《梦长安》王洛',
+          name: '《鲁艺旧址》王洛',
           year: '1年前',
           count: '601.6万',
           time: '37:38'
         },
         {
-          name: '《西安钟楼》王洛',
+          name: '《抗小旧址》王洛',
           year: '3年前',
           count: '456.2万',
           time: '28:51'
         },
         {
-          name: '《潼关古城》王洛',
+          name: '《凤凰山革命旧址》王洛',
           year: '2个月前',
           count: '301.7万',
           time: '24:47'
         },
         {
-          name: '《梦长安》王洛',
+          name: '《宝塔山》王洛',
           year: '2年前',
           count: '287.6万',
           time: '64:33'
         },
         {
-          name: '《西安钟楼》王洛',
+          name: '《鲁艺旧址》王洛',
           year: '3年前',
           count: '101.3万',
           time: '21:57'

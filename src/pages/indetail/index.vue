@@ -2,7 +2,7 @@
   <div>
     <div class="detail-box">
       <image :src="imgurl" alt="" />
-      <p class="detailtext">西安城墙是中国现存规模最大、保存最完整的古代城垣。现存城墙为明代建筑，全长13.7千米，始建于明太祖洪武三年（1370年），洪武十一年（1378年）竣工，是在明太祖“高筑墙、广积粮、缓称王”的政策指导下，在隋、唐皇城的基础上建成的，当时是西安的府城。明太祖朱元璋将次子朱樉册封为秦王，藩封、府治同在一城，因而城池规模宏大坚固，再加上后来明清屡次修葺、增建，至今保存完好......</p>
+      <p class="detailtext">说到中国的红色革命根据地，我相信很多人的第一印象就是陕西的延安，因为在这里有着太多太多的故事。当然，如今的已经是一座现代与红色革命精神相拥的城市。延安不仅有闻名世界的壶口瀑布，也有宝塔山，枣园，杨家岭等革命根据地。很多人来到延安，宝塔山是必去的地方之一。它不但是延安的标志，也是革命圣地的象征......</p>
       <p class="entercon">点击更多></p>
     </div>
     <div class="detailtit">推荐主播</div>
@@ -30,55 +30,55 @@ export default {
     return {
       performance: [
         {
-          name: '《梦长安》王洛',
+          name: '《凤凰山革命旧址》王洛',
           year: '2年前',
           count: '5601.9万',
           time: '34:36'
         },
         {
-          name: '《西安钟楼》菲菲',
+          name: '《南泥湾》王洛',
           year: '3年前',
           count: '2303万',
           time: '21:53'
         },
         {
-          name: '《潼关古城》胡一天',
+          name: '《杨家岭革命旧址》王洛',
           year: '1个月前',
           count: '876.5万',
           time: '14:47'
         },
         {
-          name: '《梦长安》王洛',
+          name: '《延安革命纪念馆》王洛',
           year: '1年前',
           count: '601.6万',
           time: '37:38'
         },
         {
-          name: '《西安钟楼》菲菲',
+          name: '《洛川会议旧址》王洛',
           year: '3年前',
           count: '456.2万',
           time: '28:51'
         },
         {
-          name: '《潼关古城》胡一天',
+          name: '《枣园革命旧址》王洛',
           year: '2个月前',
           count: '301.7万',
           time: '24:47'
         },
         {
-          name: '《梦长安》王洛',
+          name: '《西北局旧址》王洛',
           year: '2年前',
           count: '287.6万',
           time: '64:33'
         },
         {
-          name: '《西安钟楼》胡一天',
+          name: '《宝塔山》王洛',
           year: '3年前',
           count: '101.3万',
           time: '21:57'
         }
       ],
-      imgurl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587822989351&di=32a4d1fd9ef8ffe2c292c2083573bdbf&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg'
+      imgurl: 'http://www.yanan.gov.cn/wcm.files/upload/CMSyanan/201710//20171024020414950.jpg'
     }
   },
 

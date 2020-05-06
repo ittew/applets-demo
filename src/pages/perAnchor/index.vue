@@ -7,7 +7,7 @@
     </div>
     <div class="top">
       <img class="topimg" src="../../../static/images/index_icon4.png"/>
-      <p class="toptit">寻迹古长安——古都城墙</p>
+      <p class="toptit">寻迹古延安——古都城墙</p>
       <p class="topfu">月度优质主播</p>
       <div class="topno"><span class="topno_l">关注 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="topbor">|</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="topno_r">&nbsp;&nbsp;&nbsp;粉丝 1256.2万</span></div>
     </div>
@@ -45,49 +45,44 @@ export default {
           'hotRecommends': {
             'list': [
               {
-                'albumCoverUrl290': '/static/images/list/list1.jpg',
-                'title': '西安钟楼',
-                'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
+                'albumCoverUrl290': 'http://www.yanan.gov.cn/wcm.files/upload/CMSyanan/201710//20171024021406385.jpg',
+                'title': '抗小旧址',
+                'trackTitle': '延安抗小是1945年8月至1947年3月期间，中国共产党在延安时期创办的一所八路军干部与抗日军人家属子弟小学'
               },
               {
-                'albumCoverUrl290': '/static/images/list/list2.jpeg',
-                'title': '西安小雁塔',
-                'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
+                'albumCoverUrl290': 'http://www.yanan.gov.cn/wcm.files/upload/CMSyanan/201710//20171024020639794.jpg',
+                'title': '凤凰山革命旧址',
+                'trackTitle': '凤凰山革命旧址是中共中央机关从1937年1月至1938年11月期间到延安后的第一个驻地，毛泽东'
               },
               {
-                'albumCoverUrl290': '/static/images/list/list3.jpg',
-                'title': '西安城墙',
-                'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
+                'albumCoverUrl290': 'http://www.yanan.gov.cn/wcm.files/upload/CMSyanan/201710//20171024020414950.jpg',
+                'title': '宝塔山',
+                'trackTitle': '宝塔山位于延安市区中心，是延安市的标志性建筑，曾接待了100多位党和国家领导人以及中省市会议代表'
               },
               {
-                'albumCoverUrl290': '/static/images/list/list1.jpg',
-                'title': '西安钟楼',
-                'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
+                'albumCoverUrl290': 'http://www.yanan.gov.cn/wcm.files/upload/CMSyanan/201710//20171024015927179.jpg',
+                'title': '鲁艺旧址',
+                'trackTitle': '“鲁艺”在革命历史上发挥了巨大作用并对中国现代文化艺术产生了深远的影响，被称为“新文艺圣殿”。'
               },
               {
-                'albumCoverUrl290': '/static/images/list/list2.jpeg',
-                'title': '西安小雁塔',
-                'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
+                'albumCoverUrl290': 'http://www.yanan.gov.cn/wcm.files/upload/CMSyanan/201710//20171024021406385.jpg',
+                'title': '抗小旧址',
+                'trackTitle': '延安抗小是1945年8月至1947年3月期间，中国共产党在延安时期创办的一所八路军干部与抗日军人家属子弟小学'
               },
               {
-                'albumCoverUrl290': '/static/images/list/list3.jpg',
-                'title': '西安城墙',
-                'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
+                'albumCoverUrl290': 'http://www.yanan.gov.cn/wcm.files/upload/CMSyanan/201710//20171024020639794.jpg',
+                'title': '凤凰山革命旧址',
+                'trackTitle': '凤凰山革命旧址是中共中央机关从1937年1月至1938年11月期间到延安后的第一个驻地，毛泽东'
               },
               {
-                'albumCoverUrl290': '/static/images/list/list2.jpeg',
-                'title': '西安小雁塔',
-                'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
+                'albumCoverUrl290': 'http://www.yanan.gov.cn/wcm.files/upload/CMSyanan/201710//20171024020414950.jpg',
+                'title': '宝塔山',
+                'trackTitle': '宝塔山位于延安市区中心，是延安市的标志性建筑，曾接待了100多位党和国家领导人以及中省市会议代表'
               },
               {
-                'albumCoverUrl290': '/static/images/list/list3.jpg',
-                'title': '西安城墙',
-                'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
-              },
-              {
-                'albumCoverUrl290': '/static/images/list/list1.jpg',
-                'title': '西安钟楼',
-                'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
+                'albumCoverUrl290': 'http://www.yanan.gov.cn/wcm.files/upload/CMSyanan/201710//20171024015927179.jpg',
+                'title': '鲁艺旧址',
+                'trackTitle': '“鲁艺”在革命历史上发挥了巨大作用并对中国现代文化艺术产生了深远的影响，被称为“新文艺圣殿”。'
               }
             ]
           }
