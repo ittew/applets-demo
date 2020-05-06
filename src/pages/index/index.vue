@@ -368,8 +368,8 @@ export default {
     border-radius: 15rpx;
   }
   .playIcon{
-    width: 70rpx;
-    height: 65rpx;
+    width: 60rpx;
+    height: 55rpx;
     position:absolute;
     left: 50%;
     top: 50%;
@@ -390,14 +390,15 @@ export default {
   .likecover{
     width: 190rpx;
     height: 40rpx;
+    line-height: 40rpx;
     /* 透明背景层 */
     background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 1));
     /* opacity: 0.3; */
     position: absolute;
     bottom: 0rpx;
     color: #fff;
-    font-size: 25rpx;
-    padding: 5rpx 10rpx;
+    font-size: 22rpx;
+    padding: 0 10rpx;
     border-bottom-left-radius: 15rpx;
     border-bottom-right-radius: 15rpx;
   }

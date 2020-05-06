@@ -1,9 +1,8 @@
 <template>
   <div class="list">
     <div class="top-nav">
-      <div class="navigate-item" v-for="(item,index) in navTitle" :key="index" @tap="handleClick(index)">
-        <div class="names" :class="currentTab === index ? 'active' : ''">{{item.title}}</div>
-        <div class="currtline" :class="currentTab === index ? 'active' : ''"></div>
+      <div class="navigate-item" v-for="(item,index) in navTitle" :key="index">
+        <div class="names"  @tap="handleClick(index)"><span :class="currentTab === index ? 'active' : ''">{{item.title}}</span></div>
       </div>
     </div>
     <!-- 对应的内容区 -->
@@ -36,7 +35,6 @@ export default {
     return {
       currentTab: 0,
       navTitle: [
-        {title: '热门推荐'},
         {title: '红色之旅'},
         {title: '党的声音'},
         {title: '教育之声'},
@@ -44,57 +42,6 @@ export default {
       ],
       currentList: [],
       listData: [
-        {
-          'hotRecommends': {
-            'list': [
-              {
-                'albumCoverUrl290': '/static/images/list/list1.jpg',
-                'title': '西安钟楼',
-                'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
-              },
-              {
-                'albumCoverUrl290': '/static/images/list/list2.jpeg',
-                'title': '西安小雁塔',
-                'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
-              },
-              {
-                'albumCoverUrl290': '/static/images/list/list3.jpg',
-                'title': '西安城墙',
-                'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
-              },
-              {
-                'albumCoverUrl290': '/static/images/list/list1.jpg',
-                'title': '西安钟楼',
-                'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
-              },
-              {
-                'albumCoverUrl290': '/static/images/list/list2.jpeg',
-                'title': '西安小雁塔',
-                'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
-              },
-              {
-                'albumCoverUrl290': '/static/images/list/list3.jpg',
-                'title': '西安城墙',
-                'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
-              },
-              {
-                'albumCoverUrl290': '/static/images/list/list2.jpeg',
-                'title': '西安小雁塔',
-                'trackTitle': '环境清幽，经受了1200多年风雨的侵袭和70余次地震的考验，历史上曾经历过三次离合。'
-              },
-              {
-                'albumCoverUrl290': '/static/images/list/list3.jpg',
-                'title': '西安城墙',
-                'trackTitle': '古城墙历史悠久，登上城墙，感受到了历史的魅力，城墙很宽阔，俯瞰西安城很不错！'
-              },
-              {
-                'albumCoverUrl290': '/static/images/list/list1.jpg',
-                'title': '西安钟楼',
-                'trackTitle': '中国古代遗留的形制最大、保存最完整的一座钟楼，每天都有6场编钟表演。'
-              }
-            ]
-          }
-        },
         {
           'hotRecommends': {
             'list': [
@@ -341,27 +288,20 @@ export default {
   }
 
   .names {
-    font-size: 28rpx;
-    color: #3c3c3c;
-  }
-
-  .names.active {
-    color: #ff520f;
-    font-weight: bold;
     font-size: 30rpx;
+    color: #3c3c3c;
+    span {
+      display: inline-block;
+      height: 76rpx;
+    }
+    .active {
+      color: #ff520f;
+      font-weight: bold;
+      font-size: 30rpx;
+      border-bottom: 4rpx solid #ff520f;
+    }
   }
 
-  .currtline {
-    margin: -8rpx auto 0 auto;
-    width: 100rpx;
-    height: 1rpx;
-    border-radius: 4rpx;
-  }
-
-  .currtline.active {
-    background: #ff520f;
-    transition: all .3s;
-  }
   .content-item{
     width: 100%;
     display: flex;

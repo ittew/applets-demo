@@ -61,7 +61,7 @@
   box-sizing: border-box;
   position: fixed;
   z-index: 9999;
-  background: #8c9093;
+  background: rgba(0,0,0,.6);
   bottom: 20rpx;
   left:5%;
   .player{

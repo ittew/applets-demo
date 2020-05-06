@@ -69,29 +69,8 @@
       </div>
       <scroll-view class="anchor-list" enable-flex="true" scroll-x="true" bindscroll="scroll" style="width: 100%">
         <div class="list">
-            <div class="scroll-view-item">
-              <img src="/static/images/index_icon4.png" alt="">
-            </div>
-            <div class="scroll-view-item">
-              <img src="/static/images/vip.png" alt="">
-            </div>
-            <div class="scroll-view-item">
-              <img src="/static/images/logo.png" alt="">
-            </div>
-            <div class="scroll-view-item">
-              <img src="/static/images/vip.png" alt="">
-            </div>
-            <div class="scroll-view-item">
-              <img src="/static/images/index_icon4.png" alt="">
-            </div>
-            <div class="scroll-view-item">
-              <img src="/static/images/logo.png" alt="">
-            </div>
-            <div class="scroll-view-item">
-              <img src="/static/images/vip.png" alt="">
-            </div>
-            <div class="scroll-view-item">
-              <img src="/static/images/index_icon4.png" alt="">
+            <div class="scroll-view-item" v-for="(v,i) in anchors" :key="i">
+              <img :src="v" alt="" @click="jumpAnchor">
             </div>
         </div>
       </scroll-view>
@@ -206,6 +185,7 @@ export default {
         'audioUrl': 'http://www.029-smart.com/images/demo/001cq.mp3',
         'singer': '王五'
       }],
+      anchors: ['/static/images/index_icon4.png', '/static/images/vip.png', '/static/images/logo.png', '/static/images/vip.png', '/static/images/index_icon4.png', '/static/images/logo.png', '/static/images/vip.png', '/static/images/index_icon4.png'],
       audioImgUrl: ''
     }
   },
@@ -305,6 +285,14 @@ export default {
       // 播放完成处理，按钮变一下
       this.audioDom.onPause(() => {
         this.audioDom.pause()
+      })
+    },
+    /**
+     * 跳转到主播页
+     */
+    jumpAnchor () {
+      wx.navigateTo({
+        url: '/pages/perAnchor/main'
       })
     }
   },
@@ -426,7 +414,7 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 0 20rpx;
+      margin: 0 30rpx;
       font-size: 22rpx;
       color: #bbb;
       img{
