@@ -301,7 +301,7 @@ export default {
     wx.showLoading({ title: '加载中' })
     console.log(this.playing)
     console.log(this.$mp.query.id)
-    let audioId = this.$mp.query.id ? this.$mp.query.id : 1
+    let audioId = this.$mp.query.id ? this.$mp.query.id : 3
     let player = {}
     this.audioList.map(item => {
       // eslint-disable-next-line
